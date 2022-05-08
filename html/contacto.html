@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/logo.png" alt="Logo">
+    <title>PATH OF DANGER</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="../js/contactForm.js"></script>
+    <script src="../js/rightClick.js"></script>    
+</head>
+
+<body class="animate__animated animate__fadeIn">
+
+    <header id="top_bar">
+
+        <a href="../index.html" id="logo">Path of Danger</a>
+
+        <div class="imagen_logo">
+            <img src="../img/logo.png" alt="espadas" />
+        </div>
+
+        <nav id="nav">
+            <buttton id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+                <span id="hambuguer"></span>
+            </buttton>
+            <ul id="menu" role="menu">
+                <li><a href="instrucciones.html">Instrucciones</a></li>
+                <li><a href="jugar.html">Jugar</a></li>
+                <li><a class="activeLink" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </header>
+   
+    <div class="contact_form">
+
+        <h2>CONTACTANOS!</h2>
+        
+        <div id="contactError_message">
+        </div>
+        <form action="" id="myform" onsubmit="return contactForm();">
+            <div class="input_field">
+                <input type="text" placeholder="Nombre" id="contactName">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Asunto" id="contactSubject">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Telefono" id="contactPhone">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Email" id="contactEmail">
+            </div>
+            <div class="input_field">
+                <textarea placeholder="Mensaje" id="contactMessage"></textarea>
+            </div>
+            <div class="btn">
+                <input type="submit">
+            </div>
+            
+
+        </form>
+    </div>
+
+    <footer>
+
+        <div>
+            <h2>Recomendamos jugar desde Ordenador o Tablet para una
+                mejor experiencia</h2>
+        </div>
+        
+    </footer>
+
+    <script src="../js/burger_menu.js"></script> 
+</body>
+
+</html>

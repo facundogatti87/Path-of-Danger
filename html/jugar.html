@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/logo.png" alt="Logo">
+    <title>PATH OF DANGER</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="../js/pjForm.js"></script>
+    <script src="../js/rightClick.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body class="animate__animated animate__fadeIn">
+
+    <header id="top_bar">
+        <a href="../index.html" id="logo">Path of Danger</a>
+
+        <div class="imagen_logo">
+            <img src="../img/logo.png" alt="espadas" />
+        </div>
+
+        <nav id="nav">
+            <buttton id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+                <span id="hambuguer"></span>
+            </buttton>
+            <ul id="menu" role="menu">
+                <li><a href="instrucciones.html">Instrucciones</a></li>
+                <li><a class="activeLink" href="jugar.html">Jugar</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+    <div class="contenedor_principal">
+
+        <img id="jugar_img_berserker" src="../img/PJ/berserker.jpg">
+        <img id="jugar_img_templario" src="../img/PJ/templario.jpg" style="display: none;">
+        <img id="jugar_img_hechicero" src="../img/PJ/hechicero.jpg" style="display: none;">
+
+        <div class="pjForm">
+
+            <h2 id="pjError_message">Comencemos creando tu Héroe</h2>
+
+            <form action="" id="formulario_personaje">
+
+                <div class="input_field">
+
+                    <input type="text" maxlength="25" placeholder="Nombre del Héroe" id="pjName">
+
+                    <button class="btnRandomNameGenerator" onclick="randomNameGenerator(); return false;">
+                        aleatorio
+                    </button>
+                    
+                </div>
+
+                <select id="dropDownId" onchange="display()">
+                    <option value="1" selected="selected">Berserker</option>
+                    <option value="2">Templario</option>
+                    <option value="3">Hechicero</option>
+                </select>
+
+                <h3>
+                    <div id="Berserker">
+                        <p>Guerreros vikingos que combaten semidesnudos y 
+                            se lanzan al combate con furia ciega, sin armaduras. <br>
+                            Combaten bajo cierto trance de perfil
+                            psicótico, casi insensibles al dolor, se dice
+                            que son tan fuertes como osos, no hay fuego
+                            ni acero que los detenga. <br>
+                            <h4>
+                                VIDA - 100 <br>
+                                FUERZA - 9 <br>
+                                DEFENSA - 5
+                            </h4>
+                        </p>
+                    </div>
+                </h3>
+
+                <h3>
+                    <div id="Templario" style="display: none;">
+                        <p>El objetivo de los Templarios es guiar 
+                            e iluminar a la humanidad para transformar el 
+                            mundo en una utopía progresiva autosostenida, 
+                            purificada de su naturaleza bárbara. <br>
+                            Se caracterizan por sus ostentosas armaduras.<br>
+                            <h4>
+                                VIDA - 120 <br>
+                                FUERZA - 6 <br>
+                                DEFENSA - 8
+                            </h4>                            
+                        </p>
+                    </div>
+                </h3>
+
+                <h3>
+                    <div id="Hechicero" style="display: none;">
+                        <p> Dotados de poderes sobrenaturales, son expertos en el manejo 
+                            de artes oscuras, los hechiceros tienen 
+                            la capacidad de moldear los elementos a su antojo, gracias a esto, son
+                            respetados y temidos.<br>
+                            <h4>
+                                VIDA - 70 <br>
+                                PODER MAGICO - 12 <br>
+                                DEFENSA - 4
+                            </h4>                            
+                        </p>
+                    </div>
+                </h3>
+                
+                <button class="btnContinue" onclick="return pjForm();" type="submit">CONTINUAR</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="../js/burger_menu.js"></script>  
+    
+</body>
+
+</html>
