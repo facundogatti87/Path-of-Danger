@@ -1,0 +1,439 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Morpheus, Georgia, 'Times New Roman', Times, serif;
+}
+
+:root {
+    font-size: 12px;
+}
+
+@font-face {
+    font-family: Morpheus;
+    src: url(Morpheus.ttf);
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: #32323274;
+}
+
+footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+
+.btnRandomNameGenerator {
+    padding: 3px;
+    background: #910d0dd3;
+    color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.726);
+    cursor: pointer;
+}
+
+.btnContinue {
+    padding: 10px;
+    background: #690707d3;
+    color: #ffffff;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.726);
+    cursor: pointer;
+    position: relative;
+}
+
+.imagen_logo {
+    width: 50px;
+    height: 50px;
+    margin: 0px 10px;
+}
+
+.imagen_logo img {
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+li a:hover {
+    transition: all 0.1s linear;
+    text-shadow: 0 0 0.5em rgb(255, 136, 0), 0 0 0.5em rgb(255, 136, 0);
+}
+
+.contenedor_principal {
+    display: flex;
+    margin: 15px 20px;
+    height: 68vh;
+    text-align: left;
+    border: 4px solid;
+    border-radius: 7px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.726);
+}
+
+.icon_small {
+    width: 3%;
+    position: fixed;
+}
+
+.icon_medium {
+    width: 6%;
+    position: fixed;
+}
+
+.activeLink{
+    text-shadow: 0 0 0.2em rgb(255, 0, 0), 0 0 0.2em rgb(255, 0, 0);
+}
+
+
+/************************************* MENU HAMBURGUESA *************************************/
+
+#logo {
+    font-size: 2.5rem;
+    display: flex;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-shadow: 0 0 0.2em rgb(255, 0, 0), 0 0 0.2em rgb(255, 0, 0);
+}
+
+
+#top_bar {
+    height: 70px;
+    width: 90%;
+    margin: auto;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    border: 1.5px solid;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.726);
+    background: url(../img/topBar.jpg);
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: .5rem;
+}
+
+#menu a {
+    display: block;
+    margin: 45px;
+    color: white;
+    font-size: 2rem;
+}
+
+#btn-mobile {
+    display: none;
+    color: #ffffff;
+    border: .1rem solid black;
+    padding: .1rem;
+}
+
+/************************************* FUENTES *************************************/
+
+h2 {
+    font-size: 2rem;
+    margin-left: 5px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: black;
+}
+
+/************************************* ID'S *************************************/
+
+#link_jugar {
+    background: linear-gradient(to bottom, #ff0000, #fffc3b);
+    border: 1px solid #ffffff;
+    margin: 0px 5px;
+    padding: 1px;
+    border-radius: 15px;
+    color: #000000;
+    text-decoration: none;
+}
+
+
+
+/************************************ FORMULARIO DE CONTACTO ************************************/
+
+.contact_form {
+    position: fixed;
+    top: 17%;
+    left: 25%;
+    width: 50%;
+    max-width: 80%;
+    background: rgba(255, 255, 255, 0.555);
+    padding: 10px 10px 10px 10px;
+    border-radius: 15px;
+    border: 1px solid;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.726);
+}
+
+.contact_form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #910d0dd3;
+}
+
+.contact_form .input_field {
+    margin-bottom: 10px;
+    width: 94%;
+}
+
+.contact_form .input_field input[type="text"],
+
+.contact_form textarea {
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    width: 100%;
+    padding: 10px;
+}
+
+.contact_form textarea {
+    resize: none;
+    height: 40px;
+}
+
+.contact_form .btn input[type="submit"] {
+        padding: 10px;
+        background: #910d0dd3;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: bold;
+        border-radius: 25px;
+        box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.726);
+        cursor: pointer;
+}
+
+#contactError_message {
+    margin-bottom: 20px;
+    background: #af2e2ed3;
+    color: white;
+    padding: 0px;
+    text-align: center;
+    font-size: 1rem;
+    transition: all 0.5s ease;
+}
+
+
+/************************************ FORMULARIO DE PJ ************************************/
+
+.pjForm {
+    width: 100%;
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 10px 10px 10px 10px;
+}
+
+.pjForm h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #910d0dd3;
+    text-align: left;
+}
+
+.pjForm .input_field {
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+.pjForm .input_field input[type="text"],
+
+    .pjForm textarea {
+        border: 1px solid #e0e0e0;
+        width: 60%;
+        padding: 5px;
+        border-radius: 15px;
+        color: #910d0dd3;
+        font-weight: bold;
+    }
+
+    .pjForm textarea {
+        resize: none;
+        height: 80px;
+    }
+
+    .pjForm .btn input[type="submit"] {
+        padding: 10px;
+        background: #910d0dd3;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: bold;
+        border-radius: 25px;
+        box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.726);
+        cursor: pointer;
+    }
+
+    #pjError_message {
+        margin-bottom: 20px;
+        background: #af2e2ed3;
+        color: white;
+        padding: 0px;
+        text-align: center;
+        font-size: 2rem;
+        border-radius: 10px;
+        transition: all 0.5s ease;
+    }
+
+/************************************** MEDIA QUERY RESPONSIVE **************************************/
+
+@media screen and (max-width: 768px) {
+
+    body {
+        overflow-y: hidden;
+    }
+
+    #top_bar {
+        height: auto;
+    }
+
+    h2 {
+        font-size: 2.3rem;
+        color: white;
+    }
+
+    #pjError_message {
+        font-size: 1rem;
+    }
+
+    .icon_small, .icon_medium {
+        visibility: hidden;
+    }
+
+    .contenedor_principal {
+        display: flex;
+        position: relative;
+        height: 75vh;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .contenedor_principal img {
+        display: flex;
+        position: absolute;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        z-index: -100;
+    }
+
+    .contact_form {
+        top: 17%;
+        left: 8%;
+        width: 80%;
+    }
+
+
+    /* MENU HAMBURGUESA */
+
+    #btn-mobile {
+        display: flex;
+    }
+
+    #menu {
+        position: absolute;
+        width: 100%;
+        top: 67px;
+        right: 0;
+        display: block;
+        background-color: #000000e3;
+        height: 0;
+        z-index: 1000;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+        text-align: center;
+    }
+
+    #nav.active #menu {
+        display: block;
+        visibility: visible;
+        height: calc(100vh - 70px);
+        overflow-y: auto;
+        border-radius: 40px;
+    }
+
+    #menu a {
+        padding: 1rem 0;
+        margin: 0.5rem;
+        border-bottom: 2px solid #ff0000;
+    }
+
+    #menu a:hover {
+        border-bottom: 2px solid #ffffff;
+        text-shadow: 0 0 0.2em rgb(255, 0, 0), 0 0 0.2em rgb(255, 0, 0);
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+
+    #hambuguer {
+        border-top: 2px solid;
+        width: 20px;
+    }
+
+    #hambuguer::before,
+    #hambuguer::after {
+        content: '';
+        display: flex;
+        width: 20px;
+        height: 2px;
+        background-color: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #nav.active #hambuguer {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hambuguer::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hambuguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+
+    h2 {
+        font-size: 1.3rem;
+        color: white;
+    }
+
+    .contenedor_principal {
+        display: flex;
+    }
+
+}
