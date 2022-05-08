@@ -94,11 +94,26 @@ function pjForm() {
     pjError_message.innerHTML = text;
     return false;
   } else {
-    player.name = pjName;
-  }
 
-  console.log(window.player);
+    document.getElementById("btnComenzarAventura").style.display = 'block'
+    document.getElementById("btnCrearHeroe").style.display = 'none'
+    document.getElementById("descripcionHeroe").style.display = 'none'
+    document.getElementById("pjError_message").style.display = 'none'
+    document.getElementById("Berserker").style.display = 'none'
+    document.getElementById("Templario").style.display = 'none'
+    document.getElementById("Hechicero").style.display = 'none'
+    document.getElementById("inicioDeJuego").style.display = 'block'
+
+    
+    
+    player.name = pjName;
+    localStorage.setItem("Hero Name", player.name);
+    localStorage.setItem("Hero Class", player.class);
+    localStorage.setItem("Hero Life", player.life);
+    localStorage.setItem("Hero Strenght", player.strenght);
+    localStorage.setItem("Hero Defense", player.defense);
+  }
   
-  alert("Datos de tu héroe" + "\n" + "Nombre: " + player.name + "\n" + "Clase: " + player.class + "\n" + "Vida: " + player.life + "\n" + "Fuerza: " + player.strenght + "\n" + "Defensa: " + player.defense);
-  return true;
+  alert("Tu Héroe esta listo para su aventura !" + "\n"  + "\n" + "Nombre: " + player.name + "\n" + "Clase: " + player.class + "\n" + "Vida: " + player.life + "\n" + "Fuerza: " + player.strenght + "\n" + "Defensa: " + player.defense + "\n" + "\n" + "Acepta y haz clic en COMENZAR AVENTURA");
+  return false;
 }

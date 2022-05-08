@@ -65,6 +65,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 li a:hover {
@@ -152,6 +153,11 @@ h2 {
 h3 {
     font-size: 1.5rem;
     color: black;
+}
+
+h5 {
+    font-size: 3rem;
+    text-shadow: 0 0 0.2em rgb(255 243 76), 0 0 0.2em rgb(255 0 0);
 }
 
 /************************************* ID'S *************************************/
@@ -313,6 +319,11 @@ h3 {
         color: white;
     }
 
+    h5 {
+        font-size: 2rem;
+        text-shadow: 0 0 0.2em rgb(255 243 76), 0 0 0.2em rgb(255 0 0);
+    }
+
     #pjError_message {
         font-size: 1rem;
     }
@@ -325,7 +336,7 @@ h3 {
         display: flex;
         position: relative;
         height: 75vh;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.72);
     }
 
     .contenedor_principal img {
