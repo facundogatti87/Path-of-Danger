@@ -114,6 +114,6 @@ function pjForm() {
     localStorage.setItem("Hero Defense", player.defense);
   }
   
-  alert("Tu Héroe esta listo para su aventura !" + "\n"  + "\n" + "Nombre: " + player.name + "\n" + "Clase: " + player.class + "\n" + "Vida: " + player.life + "\n" + "Fuerza: " + player.strenght + "\n" + "Defensa: " + player.defense + "\n" + "\n" + "Acepta y haz clic en COMENZAR AVENTURA");
+  alert("Tu Héroe esta listo para su aventura !" + "\n"  + "\n" + "Nombre: " + player.name + "\n" + "Clase: " + player.class + "\n" + "Vida: " + player.life + "\n" + "Fuerza: " + player.strenght + "\n" + "Defensa: " + player.defense);
   return false;
 }

@@ -24,7 +24,8 @@
         </div>
 
         <nav id="nav">
-            <buttton id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <buttton id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">
                 <span id="hambuguer"></span>
             </buttton>
             <ul id="menu" role="menu">
@@ -34,7 +35,7 @@
             </ul>
         </nav>
     </header>
-   
+
     <div class="contenedor_principal">
 
         <img id="jugar_img_berserker" src="../img/PJ/berserker.jpg">
@@ -54,7 +55,7 @@
                     <button class="btnRandomNameGenerator" onclick="randomNameGenerator(); return false;">
                         aleatorio
                     </button>
-                    
+
                     <br>
                     <br>
 
@@ -63,77 +64,79 @@
                         <option value="2">Templario</option>
                         <option value="3">Hechicero</option>
                     </select>
-                    
+
                 </div>
 
                 <h3>
                     <div id="Berserker">
-                        <p>Guerreros vikingos que combaten semidesnudos y 
-                            se lanzan al combate con furia ciega, sin armaduras. <br>
-                            Combaten bajo cierto trance de perfil
-                            psicótico, casi insensibles al dolor, se dice
-                            que son tan fuertes como osos, no hay fuego
-                            ni acero que los detenga. <br>
-                            <h4 style="text-shadow: 0 0 0.2em rgb(255 0 0), 0 0 0.2em rgb(255 255 255)">
-                                VIDA - 100 <br>
-                                FUERZA - 9 <br>
-                                DEFENSA - 5
-                            </h4>
-                        </p>
+                        Guerreros vikingos que combaten semidesnudos y
+                        se lanzan al combate con furia ciega, sin armaduras. <br>
+                        Combaten bajo cierto trance de perfil
+                        psicótico, casi insensibles al dolor, se dice
+                        que son tan fuertes como osos, no hay fuego
+                        ni acero que los detenga. <br>
+                        <h4 style="text-shadow: 0 0 0.2em rgb(255 0 0), 0 0 0.2em rgb(255 255 255)">
+                            VIDA - 100 <br>
+                            FUERZA - 9 <br>
+                            DEFENSA - 5
+                        </h4>
+
                     </div>
                 </h3>
 
                 <h3>
                     <div id="Templario" style="display: none;">
-                        <p>El objetivo de los Templarios es guiar 
-                            e iluminar a la humanidad para transformar el 
-                            mundo en una utopía progresiva autosostenida, 
+                        <p>El objetivo de los Templarios es guiar
+                            e iluminar a la humanidad para transformar el
+                            mundo en una utopía progresiva autosostenida,
                             purificada de su naturaleza bárbara. <br>
                             Se caracterizan por sus ostentosas armaduras.<br>
-                            <h4 style="text-shadow: 0 0 0.2em rgb(255 0 0), 0 0 0.2em rgb(255 255 255)">
-                                VIDA - 120 <br>
-                                FUERZA - 6 <br>
-                                DEFENSA - 8
-                            </h4>                            
+                        <h4 style="text-shadow: 0 0 0.2em rgb(255 0 0), 0 0 0.2em rgb(255 255 255)">
+                            VIDA - 120 <br>
+                            FUERZA - 6 <br>
+                            DEFENSA - 8
+                        </h4>
                         </p>
                     </div>
                 </h3>
 
                 <h3>
                     <div id="Hechicero" style="display: none;">
-                        <p> Dotados de poderes sobrenaturales, son expertos en el manejo 
-                            de artes oscuras, los hechiceros tienen 
+                        <p> Dotados de poderes sobrenaturales, son expertos en el manejo
+                            de artes oscuras, los hechiceros tienen
                             la capacidad de moldear los elementos a su antojo, gracias a esto, son
                             respetados y temidos.<br>
-                            <h4 style="text-shadow: 0 0 0.2em rgb(255 0 0), 0 0 0.2em rgb(255 255 255)">
-                                VIDA - 70 <br>
-                                PODER MAGICO - 12 <br>
-                                DEFENSA - 4
-                            </h4>                            
+                        <h4 style="text-shadow: 0 0 0.2em rgb(255 0 0), 0 0 0.2em rgb(255 255 255)">
+                            VIDA - 70 <br>
+                            PODER MAGICO - 12 <br>
+                            DEFENSA - 4
+                        </h4>
                         </p>
                     </div>
                 </h3>
 
-                <button class="btnContinue" onclick="return pjForm();" type="submit" id="btnCrearHeroe" style="display: block;">Crear Héroe</button>
+                <button class="btnContinue" onclick="return pjForm();" type="submit" id="btnCrearHeroe"
+                    style="display: block;">Crear Héroe</button>
 
             </form>
 
             <h5 id="inicioDeJuego" style="display: none;">
-                    Estas a punto de comenzar tu aventura<br>
-                    El tiempo promedio de juego son XXX minutos
-                    Ten en cuenta que si cierras el navegador o intentas volver atrás, tendrás que empezar desde 0<br><br>
+                Estas a punto de comenzar tu aventura<br>
+                El tiempo promedio de juego son XXX minutos
+                Ten en cuenta que si cierras el navegador o intentas volver atrás, tendrás que empezar desde 0<br><br>
             </h5>
 
             <a href="principal.html">
-                <input type="button" class="btnContinue" value="Comenzar Aventura" id="btnComenzarAventura" style="display: none">
+                <input type="button" class="btnContinue" value="Comenzar Aventura" id="btnComenzarAventura"
+                    style="display: none">
             </a>
 
         </div>
 
     </div>
 
-    <script src="../js/burger_menu.js"></script>  
-    
+    <script src="../js/burger_menu.js"></script>
+
 </body>
 
 </html>

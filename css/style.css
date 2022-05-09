@@ -76,11 +76,12 @@ li a:hover {
 .contenedor_principal {
     display: flex;
     margin: 15px 20px;
-    height: 68vh;
+    height: 70vh;
     text-align: left;
     border: 4px solid;
     border-radius: 7px;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.726);
+    background-color: rgba(0, 0, 0, 0.72);
 }
 
 .icon_small {
@@ -146,8 +147,9 @@ li a:hover {
 /************************************* FUENTES *************************************/
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-left: 5px;
+    color: white;
 }
 
 h3 {
@@ -164,7 +166,6 @@ h5 {
 
 #link_jugar {
     background: linear-gradient(to bottom, #ff0000, #fffc3b);
-    border: 1px solid #ffffff;
     margin: 0px 5px;
     padding: 1px;
     border-radius: 15px;
@@ -315,7 +316,7 @@ h5 {
     }
 
     h2 {
-        font-size: 2.3rem;
+        font-size: 1.5rem;
         color: white;
     }
 
@@ -335,17 +336,13 @@ h5 {
     .contenedor_principal {
         display: flex;
         position: relative;
-        height: 75vh;
+        height: 70vh;
         background-color: rgba(0, 0, 0, 0.72);
     }
 
     .contenedor_principal img {
         display: flex;
-        position: absolute;
         object-fit: cover;
-        height: 100%;
-        width: 100%;
-        z-index: -100;
     }
 
     .contact_form {
@@ -440,11 +437,30 @@ h5 {
 
     h2 {
         font-size: 1.3rem;
-        color: white;
+    }
+
+    .contenedor_principal img {
+        display: flex;
+        position: absolute;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        z-index: -100;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
     }
 
     .contenedor_principal {
-        display: flex;
+        height: 74vh;
     }
 
 }
