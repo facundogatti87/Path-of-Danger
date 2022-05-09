@@ -1,11 +1,3 @@
-// const formularioPersonaje = document.getElementById("formulario_personaje")
-// console.log(formularioPersonaje)
-
-// formularioPersonaje.onsubmit = (e) => {
-//   e.preventDefault()
-// }
-
-
 player = {
   // Defino la clase inicial por default
   name: "",
@@ -14,7 +6,6 @@ player = {
   strenght: 9,
   defense: 5,
 };
-
 
 firstName = ["Frederic", "Willie", "Kirnon", "Salvatore", "Caesar", "Desmond", "Lucius", "Ragnar", "Ash", "Duradel", "Treznor", "Titus", "Duke", "Patrick", "Max", "Franz", "Chandler", "Finch", "Theodor", "Vossler", "Seymour", "Adam", "Ulrik", "Alder", "Camus", "Quint", "Klark", "Ethel", "Zeke", "Dexter", "Lucifer", "Charles", "Icas", "Camus", "Viktor", "Hades", "Leviathan", "Ross", "Bane", "Kaiser", "Vance", "Romulus"]
 lastName = ["Crowhunter", "Skullgrip", "Frostcut", "Iceslayer", "Bladefeather", "Whisperfist", "Mildtree", "Fallenhand", "Thunderblood", "Threehunter", "Deepwoods", "Skysprinter", "Roughstone", "Titansurge", "Thunderwinds", "Softrunner", "Stonebeard", "Ravenbreath", "Hellrider", "Dawnbinder", "Wisemark", "Swiftshaper", "Eaglestride", "Grayspire", "Spiritdream", "Crowthorne", "Whisperward", "Masterkeeper", "Thunderstream", "Brightshout", "Snakerunner", "Frostspark", "Starmore", "Deathshaper", "Titancloud", "Snakedust", "Hillblade"]
@@ -104,16 +95,20 @@ function pjForm() {
     document.getElementById("Hechicero").style.display = 'none'
     document.getElementById("inicioDeJuego").style.display = 'block'
 
-    
-    
     player.name = pjName;
-    localStorage.setItem("Hero Name", player.name);
-    localStorage.setItem("Hero Class", player.class);
-    localStorage.setItem("Hero Life", player.life);
-    localStorage.setItem("Hero Strenght", player.strenght);
-    localStorage.setItem("Hero Defense", player.defense);
+    parseInt(player.life)
+    parseInt(player.strenght)
+    parseInt(player.defense)
+
+    localStorage.setItem("HeroName", player.name);
+    localStorage.setItem("HeroClass", player.class);
+    localStorage.setItem("HeroLife", player.life);
+    localStorage.setItem("HeroStrenght", player.strenght);
+    localStorage.setItem("HeroDefense", player.defense);
+
   }
-  
+
   alert("Tu Héroe esta listo para su aventura !" + "\n"  + "\n" + "Nombre: " + player.name + "\n" + "Clase: " + player.class + "\n" + "Vida: " + player.life + "\n" + "Fuerza: " + player.strenght + "\n" + "Defensa: " + player.defense);
   return false;
 }
+
