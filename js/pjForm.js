@@ -111,4 +111,3 @@ function pjForm() {
   alert("Tu Héroe esta listo para su aventura !" + "\n"  + "\n" + "Nombre: " + player.name + "\n" + "Clase: " + player.class + "\n" + "Vida: " + player.life + "\n" + "Fuerza: " + player.strenght + "\n" + "Defensa: " + player.defense);
   return false;
 }
-

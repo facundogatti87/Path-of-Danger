@@ -14,7 +14,7 @@
     <script src="../js/enemies.js"></script>
 </head>
 
-<body class="animate__animated animate__fadeIn" onload="imagen_pj()" >
+<body class="animate__animated animate__fadeIn" onload="Pj()" >
 
     <header id="top_bar">
 
@@ -22,25 +22,41 @@
         <img class="imgCharacter" id="imgTemplario" src="../img/PJ/templarioSmall.jpg" style="display: none">
         <img class="imgCharacter" id="imgHechicero" src="../img/PJ/hechiceroSmall.jpg" style="display: none">
 
+        <h2 class="estadisticas" id="pjStats"></h2>
+
+
         <nav id="nav">
             <buttton id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
                 <span id="hambuguer"></span>
             </buttton>
             <ul id="menu" role="menu">
-                <li><a class="activeLink" href="instrucciones.html">Reiniciar JUEGO</a></li>
+                <li><a class="activeLink" id="linkSurrender" onclick="btnRestartGame()">Reiniciar JUEGO</a></li>
             </ul>
         </nav>
 
     </header>
    
-    <div class="contenedor_principal">
+    <div class="contenedor_principal" id="juego">
+
         <img src="../img/Enemies/orco.jpg">
+
         <h2>
             Te encontrabas durmiendo, cuando de repente escuchas ruido a metal golpeando el suelo. <br>
             Al abrir los ojos te das cuenta que un Orco está mirandote fijamente, su puño se entrecierra y se lanza sobre ti <br> <br>
             Recuerdas tus años de entrenamiento, y te preparas para el combate
         </h2>
 
+        <button class="choice1">ATACAR</button>
+        <button class="choice2">ESCAPAR</button>
+    </div>
+
+    <div class="contenedor_principal" id="surrender" style="display: none">
+        <img src="../img/surrender.png">
+            
+        <button class="btnAgain">
+            <a class="activeLink" href="../index.html">COMENZAR DE NUEVO</a>
+        </button>
+        <h2 class="pjSurrender" id="pjSurrender">
     </div>
     
     <footer>
