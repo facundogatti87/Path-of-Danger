@@ -50,6 +50,7 @@ footer {
 }
 
 .choice1 {
+    /* OPCION IZQUIERDA */
     padding: 10px;
     width: 40%;
     bottom: 0;
@@ -62,8 +63,22 @@ footer {
 }
 
 .choice2 {
+    /* OPCION DERECHA */
     padding: 10px;
     width: 40%;
+    bottom: 0;
+    right: 0;
+    background: #690707d3;
+    color: #ffffff;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.726);
+    cursor: pointer;
+    position: flex;
+}
+
+.choice3 {
+    /* OPCION CENTRAL */
+    padding: 10px;
+    width: 100%;
     bottom: 0;
     right: 0;
     background: #690707d3;
@@ -159,7 +174,21 @@ li a:hover {
     padding: 0.5rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    border: 1.5px solid;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.726);
+    background: url(../img/topBar.jpg);
+}
+
+#down_bar {
+    height: 70px;
+    width: 90%;
+    margin: auto;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 15px;
     border: 1.5px solid;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.726);
@@ -177,6 +206,7 @@ li a:hover {
     margin: 45px;
     color: white;
     font-size: 2rem;
+    cursor: pointer;
 }
 
 #btn-mobile {
@@ -199,12 +229,19 @@ h3 {
     color: black;
 }
 
-h5 {
+h4 {
     font-size: 3rem;
     text-shadow: 0 0 0.2em rgb(255 243 76), 0 0 0.2em rgb(255 0 0);
 }
 
+h5{
+    text-shadow: 0 0 0.2em rgb(255 0 0), 0 0 0.2em rgb(255 255 255);
+}
+
 .estadisticas{
+    font-size: 1.5rem;
+    margin: 5px;
+    color: white;
     text-shadow: 0 0 0.2em rgb(255 0 0), 0 0 0.2em rgb(255 255 255);
 }
 
@@ -372,7 +409,7 @@ h5 {
         color: white;
     }
 
-    h5 {
+    h4 {
         font-size: 2rem;
         text-shadow: 0 0 0.2em rgb(255 243 76), 0 0 0.2em rgb(255 0 0);
     }
@@ -428,7 +465,7 @@ h5 {
     #nav.active #menu {
         display: block;
         visibility: visible;
-        height: calc(100vh - 70px);
+        height: calc(80vh - 70px);
         overflow-y: auto;
         border-radius: 40px;
     }
@@ -502,9 +539,15 @@ h5 {
 
     .choice1 {
         position: absolute;
+        margin: 0 0 7px 7px;
     }
     
     .choice2 {
+        position: absolute;
+        margin: 0 7px 7px 0;
+    }
+
+    .choice3 {
         position: absolute;
     }
 }

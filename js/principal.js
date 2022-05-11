@@ -17,19 +17,29 @@ function Pj() {
 
         text = "VIDA: " + player.life + " FUERZA: " + player.strenght + " DEFENSA: " + player.defense;
         pjStats.innerHTML = text;
-
+        
     }
 
     else if (player.class == "Templario") {
         document.getElementById("imgBerserker").style.display = 'none'
         document.getElementById("imgTemplario").style.display = 'block'
         document.getElementById("imgHechicero").style.display = 'none'
+
+        var text;
+
+        text = "VIDA: " + player.life + " FUERZA: " + player.strenght + " DEFENSA: " + player.defense;
+        pjStats.innerHTML = text;
     }
 
     else if (player.class == "Hechicero") {
         document.getElementById("imgBerserker").style.display = 'none'
         document.getElementById("imgTemplario").style.display = 'none'
         document.getElementById("imgHechicero").style.display = 'block'
+
+        var text;
+
+        text = "VIDA: " + player.life + " FUERZA: " + player.strenght + " DEFENSA: " + player.defense;
+        pjStats.innerHTML = text;
     }
 }
 
@@ -41,10 +51,10 @@ function btnRestartGame() {
         parseInt(localStorage.setItem("HeroLife", 1));
         localStorage.setItem("HeroStrenght", player.strenght);
         localStorage.setItem("HeroDefense", player.defense);
-        document.getElementById("juego").style.display = 'none'
-        document.getElementById("linkSurrender").style.display = 'none'
-        document.getElementById("pjStats").style.display = 'none'
+        document.getElementById("down_bar").style.display = 'none'
+        document.getElementById("top_bar").style.display = 'none'
         document.getElementById("surrender").style.display = 'flex'
+        document.getElementById("path1").style.display = 'none'
 
         var text;
         text = "TODOS RECORDARÁN " + pjName + " COMO UN COBARDE !!! UN PEQUEÑO " + player.class + " QUE NO SUPO COMO AFRONTAR UNA AVENTURA";

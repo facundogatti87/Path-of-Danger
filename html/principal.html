@@ -14,30 +14,31 @@
     <script src="../js/enemies.js"></script>
 </head>
 
-<body class="animate__animated animate__fadeIn" onload="Pj()" >
+<body class="animate__animated animate__fadeIn" onload="Pj(), enemies()">
 
     <header id="top_bar">
 
-        <img class="imgCharacter" id="imgBerserker" src="../img/PJ/berserkerSmall.jpg" style="display: none">
-        <img class="imgCharacter" id="imgTemplario" src="../img/PJ/templarioSmall.jpg" style="display: none">
-        <img class="imgCharacter" id="imgHechicero" src="../img/PJ/hechiceroSmall.jpg" style="display: none">
 
-        <h2 class="estadisticas" id="pjStats"></h2>
+            <img class="imgCharacter" id="imgBerserker" src="../img/PJ/berserkerSmall.jpg" style="display: none">
+            <img class="imgCharacter" id="imgTemplario" src="../img/PJ/templarioSmall.jpg" style="display: none">
+            <img class="imgCharacter" id="imgHechicero" src="../img/PJ/hechiceroSmall.jpg" style="display: none">
 
+            <p class="estadisticas" id="pjStats"></p>
 
-        <nav id="nav">
-            <buttton id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
-                <span id="hambuguer"></span>
-            </buttton>
-            <ul id="menu" role="menu">
-                <li><a class="activeLink" id="linkSurrender" onclick="btnRestartGame()">Reiniciar JUEGO</a></li>
-            </ul>
-        </nav>
+            <nav id="nav">
+                <buttton id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+                    <span id="hambuguer"></span>
+                </buttton>
+                <ul id="menu" role="menu">
+                    <li><a class="activeLink" id="linkSurrender" onclick="btnRestartGame()">Reiniciar JUEGO</a></li>
+                </ul>
+            </nav>
+
 
     </header>
    
-    <div class="contenedor_principal" id="juego">
-
+    <div class="contenedor_principal" id="path1">
+        
         <img src="../img/Enemies/orco.jpg">
 
         <h2>
@@ -47,7 +48,8 @@
         </h2>
 
         <button class="choice1">ATACAR</button>
-        <button class="choice2">ESCAPAR</button>
+        <button class="choice2">ATACAR</button>
+        
     </div>
 
     <div class="contenedor_principal" id="surrender" style="display: none">
@@ -59,16 +61,14 @@
         <h2 class="pjSurrender" id="pjSurrender">
     </div>
     
-    <footer>
-        
-        <div style="flex-direction: row">
-            <h2>DATOS DE HEROE</h2>
-            <h2>DATOS DE ENEMIGO</h2>
-        </div>
-        
-    </footer>
+    <header id="down_bar">
 
-    <script src="../js/burger_menu.js"></script>  
+        <img class="imgCharacter" src="../img/Enemies/orcoSmall.jpg" style="display: block">
+        <p class="estadisticas" id="enemyStats"></p>
+
+    </header>
+
+    <script src="../js/burger_menu.js"></script> 
 
 </body>
 
