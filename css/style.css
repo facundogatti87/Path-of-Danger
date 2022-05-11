@@ -52,7 +52,7 @@ footer {
 .choice1 {
     /* OPCION IZQUIERDA */
     padding: 10px;
-    width: 40%;
+    width: 50%;
     bottom: 0;
     left: 0;
     background: #690707d3;
@@ -65,7 +65,7 @@ footer {
 .choice2 {
     /* OPCION DERECHA */
     padding: 10px;
-    width: 40%;
+    width: 50%;
     bottom: 0;
     right: 0;
     background: #690707d3;
@@ -141,6 +141,18 @@ li a:hover {
     background-color: rgba(0, 0, 0, 0.72);
 }
 
+.contenedor_opciones_tablet{
+    display: flex;
+    margin: 15px 20px;
+    border-radius: 7px;
+}
+
+.contenedor_opciones_celular{
+    display: none;
+    margin: 15px 20px;
+    border-radius: 7px;
+}
+
 .icon_small {
     width: 3%;
     position: fixed;
@@ -182,7 +194,7 @@ li a:hover {
 }
 
 #down_bar {
-    height: 70px;
+    height: 50px;
     width: 90%;
     margin: auto;
     padding: 0.5rem;
@@ -425,7 +437,7 @@ h5{
     .contenedor_principal {
         display: flex;
         position: relative;
-        height: 70vh;
+        height: 67vh;
         background-color: rgba(0, 0, 0, 0.72);
     }
 
@@ -433,6 +445,9 @@ h5{
         display: flex;
         object-fit: cover;
     }
+
+        
+   
 
     .contact_form {
         top: 17%;
@@ -465,7 +480,7 @@ h5{
     #nav.active #menu {
         display: block;
         visibility: visible;
-        height: calc(80vh - 70px);
+        height: calc(100vh - 70px);
         overflow-y: auto;
         border-radius: 40px;
     }
@@ -524,8 +539,16 @@ h5{
 
 @media screen and (max-width: 576px) {
 
+    .contenedor_opciones_tablet{
+        display: none;
+    }
+    
+    .contenedor_opciones_celular{
+        display: flex;
+    }
+
     h2 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     .contenedor_principal img {
@@ -539,12 +562,10 @@ h5{
 
     .choice1 {
         position: absolute;
-        margin: 0 0 7px 7px;
     }
     
     .choice2 {
         position: absolute;
-        margin: 0 7px 7px 0;
     }
 
     .choice3 {
@@ -555,15 +576,15 @@ h5{
 @media screen and (max-width: 320px) {
 
     h2 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     h3 {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .contenedor_principal {
-        height: 71vh;
+        height: 69vh;
     }
 
 }

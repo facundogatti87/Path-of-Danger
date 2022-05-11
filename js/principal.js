@@ -43,6 +43,30 @@ function Pj() {
     }
 }
 
+function enemies() {
+
+    orco = {
+        name: "Orco",
+        class: "Orco",
+        life: 65,
+        strenght: 4,
+        defense: 2,
+    };
+    
+    parseInt(orco.life)
+    parseInt(orco.strenght)
+    parseInt(orco.defense)
+    
+    localStorage.setItem("OrcoName", orco.name);
+    localStorage.setItem("OrcoClass", orco.class);
+    localStorage.setItem("OrcoLife", orco.life);
+    localStorage.setItem("OrcoStrenght", orco.strenght);
+    localStorage.setItem("OrcoDefense", orco.defense);
+
+    text = "VIDA: " + orco.life + " FUERZA: " + orco.strenght + " DEFENSA: " + orco.defense;
+    enemyStats.innerHTML = text;
+}
+
 function btnRestartGame() {
     if (confirm("¿Estás seguro que querés reiniciar tu aventura?")) {
 
@@ -57,10 +81,36 @@ function btnRestartGame() {
         document.getElementById("path1").style.display = 'none'
 
         var text;
-        text = "TODOS RECORDARÁN " + pjName + " COMO UN COBARDE !!! UN PEQUEÑO " + player.class + " QUE NO SUPO COMO AFRONTAR UNA AVENTURA";
+        text = "TODOS RECORDARÁN A " + pjName + " COMO UN COBARDE !!! UN PEQUEÑO " + player.class + " QUE NO SUPO COMO AFRONTAR UNA AVENTURA";
         pjSurrender.innerHTML = text;
 
     } else {
 
     }
+}
+
+function btnAttack() {
+
+    player.life = player.life - orco.strenght
+    orco.life = orco.life - player.strenght
+
+
+    if (player.life <= 0) {
+        alert("PERDISTE");
+    }
+
+    if (orco.life <= 0) {
+        alert("GANASTE");
+    }
+    
+    var textPlayer;
+
+    textPlayer = "VIDA: " + player.life + " FUERZA: " + player.strenght + " DEFENSA: " + player.defense;
+    pjStats.innerHTML = textPlayer;
+
+    var textEnemy;
+
+    textEnemy = "VIDA: " + orco.life + " FUERZA: " + orco.strenght + " DEFENSA: " + orco.defense;
+    enemyStats.innerHTML = textEnemy;
+
 }
