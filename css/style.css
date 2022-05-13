@@ -35,6 +35,7 @@ footer {
     padding: 3px;
     background: #910d0dd3;
     color: #ffffff;
+    font-size: 1.5rem;
     border-radius: 25px;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.726);
     cursor: pointer;
@@ -42,6 +43,7 @@ footer {
 
 .btnContinue {
     padding: 10px;
+    font-size: 1.5rem;
     background: #690707d3;
     color: #ffffff;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.726);
@@ -60,6 +62,8 @@ footer {
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.726);
     cursor: pointer;
     position: flex;
+    font-size: 1.5rem;
+    border-radius: 2rem;
 }
 
 .choice2 {
@@ -73,6 +77,8 @@ footer {
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.726);
     cursor: pointer;
     position: flex;
+    font-size: 1.5rem;
+    border-radius: 2rem;
 }
 
 .choice3 {
@@ -86,6 +92,8 @@ footer {
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.726);
     cursor: pointer;
     position: flex;
+    font-size: 1.5rem;
+    border-radius: 2rem;
 }
 
 .btnAgain {
@@ -98,7 +106,7 @@ footer {
 }
 
 
-.pjSurrender{
+.pjSurrender, .pjDeath{
     margin: auto;
     text-transform: uppercase;
     text-align: center;
@@ -133,7 +141,7 @@ li a:hover {
 .contenedor_principal {
     display: flex;
     margin: 15px 20px;
-    height: 68vh;
+    height: 66vh;
     text-align: left;
     border: 4px solid;
     border-radius: 7px;
@@ -231,13 +239,13 @@ li a:hover {
 /************************************* FUENTES *************************************/
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     margin-left: 5px;
     color: white;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     color: black;
 }
 
@@ -251,7 +259,7 @@ h5{
 }
 
 .estadisticas{
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     margin: 5px;
     color: white;
     text-shadow: 0 0 0.2em rgb(255 0 0), 0 0 0.2em rgb(255 255 255);
@@ -266,6 +274,10 @@ h5{
     border-radius: 15px;
     color: #000000;
     text-decoration: none;
+}
+
+#dropDownId{
+    font-size: 1.5rem;
 }
 
 
@@ -364,6 +376,7 @@ h5{
     .pjForm textarea {
         border: 1px solid #e0e0e0;
         width: 60%;
+        font-size: 2rem;
         padding: 5px;
         border-radius: 15px;
         color: #910d0dd3;
@@ -417,13 +430,21 @@ h5{
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         color: white;
+    }
+
+    h3{
+        font-size: 1.5rem;
     }
 
     h4 {
         font-size: 2rem;
         text-shadow: 0 0 0.2em rgb(255 243 76), 0 0 0.2em rgb(255 0 0);
+    }
+
+    .choice1, .choice2, choice3{
+        font-size: 1.5rem;
     }
 
     #pjError_message {
@@ -446,15 +467,11 @@ h5{
         object-fit: cover;
     }
 
-        
-   
-
     .contact_form {
         top: 17%;
         left: 8%;
         width: 80%;
     }
-
 
     /* MENU HAMBURGUESA */
 
@@ -551,6 +568,19 @@ h5{
         font-size: 1.5rem;
     }
 
+    .estadisticas{
+        font-size: 1.4rem;
+    }
+
+    
+    .btnRandomNameGenerator {
+        font-size: 1.3rem;
+    }
+
+    #dropDownId{
+        font-size: 1.2rem;
+    }
+
     .contenedor_principal img {
         display: flex;
         position: absolute;
@@ -575,12 +605,18 @@ h5{
 
 @media screen and (max-width: 320px) {
 
+    .pjForm .input_field input[type="text"],
+
+        .pjForm textarea {
+            font-size: 1.4rem;
+        }
+
     h2 {
         font-size: 1.3rem;
     }
 
     h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .contenedor_principal {

@@ -17,7 +17,6 @@
 
     <header id="top_bar">
 
-
         <img class="imgCharacter" id="imgBerserker" src="../img/PJ/berserkerSmall.jpg" style="display: none">
         <img class="imgCharacter" id="imgTemplario" src="../img/PJ/templarioSmall.jpg" style="display: none">
         <img class="imgCharacter" id="imgHechicero" src="../img/PJ/hechiceroSmall.jpg" style="display: none">
@@ -34,35 +33,50 @@
             </ul>
         </nav>
 
-
     </header>
 
+    <!-- DIV QUE CONTIENE LA VENTANA DE LOS DIFERENTES CAMINOS -->
+    <div id="paths">
 
-    <div id="path1">
+        <div id="path1">
 
-        <div class="contenedor_principal">
+            <div class="contenedor_principal">
+    
+                <img src="../img/Enemies/orco.jpg">
+    
+                <h2>
+                    Te encontrabas durmiendo, cuando de repente escuchas ruido a metal golpear el suelo. <br>
+                    Al abrir los ojos, delante de ti, un Orco mirandote fijamente, su mirada se cruza con la tuya, mientras observas como
+                    se relame el labio. Su puño se cierra y se lanza sobre ti <br> <br>
+                    Recuerdas tus años de entrenamiento, y te preparas para el combate
+                </h2>
+    
+                <div class="contenedor_opciones_celular">
+                    <button class="choice3" onclick="btnAttackOrco()">ATACAR</button>
 
-            <img src="../img/Enemies/orco.jpg">
+                </div>
+    
+            </div>
+    
+            <div class="contenedor_opciones_tablet">
+                <button class="choice3" onclick="btnAttackOrco()">ATACAR</button>
 
-            <h2>
-                Te encontrabas durmiendo, cuando de repente escuchas ruido a metal golpear el suelo. <br>
-                Al abrir los ojos, delante de ti, un Orco mirandote fijamente, su mirada se cruza con la tuya, mientras observas como
-                se relame el labio. Su puño se cierra y se lanza sobre ti <br> <br>
-                Recuerdas tus años de entrenamiento, y te preparas para el combate
-            </h2>
-
-            <div class="contenedor_opciones_celular">
-                <button class="choice3" onclick="btnAttack()">ATACAR</button>
             </div>
 
+            <div id="down_bar">
+
+                <img class="imgCharacter" src="../img/Enemies/orcoSmall.jpg" style="display: block">
+                <p class="estadisticas" id="enemyStats"></p>
+        
+            </div>
+    
         </div>
 
-        <div class="contenedor_opciones_tablet">
-            <button class="choice3" onclick="btnAttack()">ATACAR</button>
-        </div>
 
     </div>
+    
 
+    <!-- DIV QUE CONTIENE LA VENTANA CUANDO EL HEROE SE RINDE -->
     <div class="contenedor_principal" id="surrender" style="display: none">
         <img src="../img/surrender.png">
 
@@ -72,12 +86,19 @@
         <h2 class="pjSurrender" id="pjSurrender">
     </div>
 
-    <div id="down_bar">
+    <!-- DIV QUE CONTIENE LA VENTANA CUANDO EL HEROE MUERE -->
+    <div class="contenedor_principal" id="death" style="display: none">
+        <img src="../img/death.png">
 
-        <img class="imgCharacter" src="../img/Enemies/orcoSmall.jpg" style="display: block">
-        <p class="estadisticas" id="enemyStats"></p>
-
+        <button class="btnAgain">
+            <a class="activeLink" href="../index.html">COMENZAR DE NUEVO</a>
+        </button>
+        <h2 class="pjDeath" id="pjDeath"></h2>
     </div>
+
+    
+
+    
 
     <script src="../js/burger_menu.js"></script>
 
