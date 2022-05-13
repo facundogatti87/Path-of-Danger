@@ -96,9 +96,6 @@ function pjForm() {
     document.getElementById("inicioDeJuego").style.display = 'block'
 
     player.name = pjName;
-    parseInt(player.life)
-    parseInt(player.strenght)
-    parseInt(player.defense)
 
     localStorage.setItem("HeroName", player.name);
     localStorage.setItem("HeroClass", player.class);

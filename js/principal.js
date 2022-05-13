@@ -66,7 +66,7 @@ function enemies() {
 }
 
 function btnAttackOrco() {
-
+    
     heroLife = localStorage.getItem('HeroLife'),
     heroStrenght = localStorage.getItem('HeroStrenght'),
     heroDefense = localStorage.getItem('HeroDefense')
@@ -83,18 +83,23 @@ function btnAttackOrco() {
     enemyStrenght = parseInt(enemyStrenght);
     enemyDefense = parseInt(enemyDefense);
 
-    localStorage.setItem("HeroLife", heroLife + heroDefense - enemyStrenght)
-    localStorage.setItem("OrcoLife", enemyLife + enemyDefense - heroStrenght)
+    var enemyRandomDice = Math.floor(Math.random()*(10-1))+1
+    var heroRandomDice = Math.floor(Math.random()*(10-1))+1
+
+    localStorage.setItem("HeroLife", heroLife + heroDefense - enemyStrenght - enemyRandomDice)
+    localStorage.setItem("OrcoLife", enemyLife + enemyDefense - heroStrenght - heroRandomDice)
 
     if (localStorage.getItem("HeroLife") <= 0) {
         
         localStorage.setItem("HeroLife", 1);
+        localStorage.setItem("HeroStrenght", 0);
+        localStorage.setItem("HeroDefense", 0);
         document.getElementById("top_bar").style.display = 'none'
         document.getElementById("paths").style.display = 'none'
         document.getElementById("death").style.display = 'flex'
 
         var text;
-        text = "TODOS RECORDARÁN A " + player.name + " UN MARAVILLOSO " + player.class + " QUIEN DIO SU VIDA POR UNA GRAN AVENTURA" ;
+        text = "TODOS RECORDARÁN A " + localStorage.getItem('HeroName') + ", UN MARAVILLOSO " + localStorage.getItem('HeroClass') + " QUIEN DIO SU VIDA POR UNA GRAN AVENTURA" ;
         pjDeath.innerHTML = text;
 
     }
@@ -102,18 +107,18 @@ function btnAttackOrco() {
     if (localStorage.getItem("OrcoLife") <= 0) {
         alert("GANASTE");
         localStorage.setItem("OrcoLife", initialLifeOrco);
+
     }
 
     var textPlayer;
 
-    textPlayer = "VIDA: " + heroLife + " FUERZA: " + heroStrenght + " DEFENSA: " + heroDefense;
+    textPlayer = "VIDA: " + localStorage.getItem('HeroLife') + " FUERZA: " + localStorage.getItem('HeroStrenght') + " DEFENSA: " + localStorage.getItem('HeroDefense');
     pjStats.innerHTML = textPlayer;
    
     var textEnemy;
 
-    textEnemy = "VIDA: " + enemyLife + " FUERZA: " + enemyStrenght + " DEFENSA: " + enemyDefense;
+    textEnemy = "VIDA: " + localStorage.getItem('OrcoLife') + " FUERZA: " + enemyStrenght + " DEFENSA: " + enemyDefense;
     enemyStats.innerHTML = textEnemy;
-
 
 }
 
@@ -121,12 +126,14 @@ function btnRestartGame() {
     if (confirm("¿Estás seguro que querés reiniciar tu aventura?")) {
 
         localStorage.setItem("HeroLife", 1);
+        localStorage.setItem("HeroStrenght", 0);
+        localStorage.setItem("HeroDefense", 0);
         document.getElementById("top_bar").style.display = 'none'
         document.getElementById("paths").style.display = 'none'
         document.getElementById("surrender").style.display = 'flex'
 
         var text;
-        text = "TODOS RECORDARÁN A " + player.name + " COMO UN COBARDE !!! UN PEQUEÑO " + player.class + " QUE NO SUPO COMO AFRONTAR UNA AVENTURA";
+        text = "TODOS RECORDARÁN A " + localStorage.getItem('HeroName') + " COMO UN COBARDE !!! UN PEQUEÑO " + localStorage.getItem('HeroClass') + " QUE NO SUPO COMO AFRONTAR UNA AVENTURA";
         pjSurrender.innerHTML = text;
 
     } else {
