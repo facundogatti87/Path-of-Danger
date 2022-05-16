@@ -5,7 +5,7 @@ player = {
   life: 100,
   strenght: 9,
   defense: 5,
-};
+};  
 
 firstName = ["Frederic", "Willie", "Kirnon", "Salvatore", "Caesar", "Desmond", "Lucius", "Ragnar", "Ash", "Duradel", "Treznor", "Titus", "Duke", "Patrick", "Max", "Franz", "Chandler", "Finch", "Theodor", "Vossler", "Seymour", "Adam", "Ulrik", "Alder", "Camus", "Quint", "Klark", "Ethel", "Zeke", "Dexter", "Lucifer", "Charles", "Icas", "Camus", "Viktor", "Hades", "Leviathan", "Ross", "Bane", "Kaiser", "Vance", "Romulus"]
 lastName = ["Crowhunter", "Skullgrip", "Frostcut", "Iceslayer", "Bladefeather", "Whisperfist", "Mildtree", "Fallenhand", "Thunderblood", "Threehunter", "Deepwoods", "Skysprinter", "Roughstone", "Titansurge", "Thunderwinds", "Softrunner", "Stonebeard", "Ravenbreath", "Hellrider", "Dawnbinder", "Wisemark", "Swiftshaper", "Eaglestride", "Grayspire", "Spiritdream", "Crowthorne", "Whisperward", "Masterkeeper", "Thunderstream", "Brightshout", "Snakerunner", "Frostspark", "Starmore", "Deathshaper", "Titancloud", "Snakedust", "Hillblade"]
@@ -104,7 +104,5 @@ function pjForm() {
     localStorage.setItem("HeroDefense", player.defense);
 
   }
-
-  alert("Tu Héroe esta listo para su aventura !" + "\n"  + "\n" + "Nombre: " + player.name + "\n" + "Clase: " + player.class + "\n" + "Vida: " + player.life + "\n" + "Fuerza: " + player.strenght + "\n" + "Defensa: " + player.defense);
   return false;
 }

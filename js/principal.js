@@ -40,7 +40,7 @@ function Pj() {
     }
 }
 
-function enemies() {
+function enemyOrco() {
 
     // ORCO
 
@@ -62,14 +62,18 @@ function enemies() {
     enemyStats.innerHTML = text;
 
     initialLifeOrco = orco.life;
+    document.getElementById("imgDownBar").src="../img/enemies/orcoSmall.jpg"
 
 }
 
 function btnAttackOrco() {
-    
-    heroLife = localStorage.getItem('HeroLife'),
-    heroStrenght = localStorage.getItem('HeroStrenght'),
-    heroDefense = localStorage.getItem('HeroDefense')
+    audio = document.querySelector(".audioAttack")
+    audio.setAttribute("src", "../sounds/cut1.mp3")
+    audio.play()
+
+    heroLife = localStorage.getItem('HeroLife');
+    heroStrenght = localStorage.getItem('HeroStrenght');
+    heroDefense = localStorage.getItem('HeroDefense');
 
     heroLife = parseInt(heroLife);
     heroStrenght = parseInt(heroStrenght);
@@ -89,6 +93,12 @@ function btnAttackOrco() {
     localStorage.setItem("HeroLife", heroLife + heroDefense - enemyStrenght - enemyRandomDice)
     localStorage.setItem("OrcoLife", enemyLife + enemyDefense - heroStrenght - heroRandomDice)
 
+    enemyDamage = heroDefense - enemyStrenght - enemyRandomDice;
+    heroDamage = enemyDefense - heroStrenght - heroRandomDice
+    
+    heroDicePath1.innerHTML = "Dado Héroe: " + heroRandomDice + " ---> Daño: " + heroDamage *-1;
+    enemyDicePath1.innerHTML = "Dado Enemigo: " + enemyRandomDice + " ---> Daño: " + enemyDamage *-1;
+
     if (localStorage.getItem("HeroLife") <= 0) {
         
         localStorage.setItem("HeroLife", 1);
@@ -102,12 +112,23 @@ function btnAttackOrco() {
         text = "TODOS RECORDARÁN A " + localStorage.getItem('HeroName') + ", UN MARAVILLOSO " + localStorage.getItem('HeroClass') + " QUIEN DIO SU VIDA POR UNA GRAN AVENTURA" ;
         pjDeath.innerHTML = text;
 
+        audio = document.querySelector(".audioDeath")
+        audio.setAttribute("src", "../sounds/pjDeath.mp3")
+        audio.play()
+
     }
 
     if (localStorage.getItem("OrcoLife") <= 0) {
-        alert("GANASTE");
-        localStorage.setItem("OrcoLife", initialLifeOrco);
 
+        document.getElementById("path1").style.display = 'none'
+        document.getElementById("path2").style.display = 'block'
+        localStorage.setItem("OrcoLife", initialLifeOrco); //RESETEO VIDA DEL ENEMIGO PARA USARLO MAS TARDE
+
+        audio = document.querySelector(".enemyOrcDeath")
+        audio.setAttribute("src", "../sounds/enemyOrcDeath.mp3")
+        audio.play()
+
+        document.getElementById("down_bar").style.display = 'none'
     }
 
     var textPlayer;
@@ -119,6 +140,7 @@ function btnAttackOrco() {
 
     textEnemy = "VIDA: " + localStorage.getItem('OrcoLife') + " FUERZA: " + enemyStrenght + " DEFENSA: " + enemyDefense;
     enemyStats.innerHTML = textEnemy;
+
 
 }
 
@@ -136,7 +158,10 @@ function btnRestartGame() {
         text = "TODOS RECORDARÁN A " + localStorage.getItem('HeroName') + " COMO UN COBARDE !!! UN PEQUEÑO " + localStorage.getItem('HeroClass') + " QUE NO SUPO COMO AFRONTAR UNA AVENTURA";
         pjSurrender.innerHTML = text;
 
+        audio = document.querySelector(".audioDeath")
+        audio.setAttribute("src", "../sounds/pjSurrender.mp3")
+        audio.play()
+
     } else {
     }
 }
-

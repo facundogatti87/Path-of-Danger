@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="../js/rightClick.js"></script>
     <script src="../js/principal.js"></script>
+    
 </head>
 
-<body class="animate__animated animate__fadeIn" onload="Pj(), enemies()">
-
+<body class="animate__animated animate__fadeIn" onload="Pj(), enemyOrco()">
+    
     <header id="top_bar">
 
         <img class="imgCharacter" id="imgBerserker" src="../img/PJ/berserkerSmall.jpg" style="display: none">
@@ -26,7 +27,7 @@
         <nav id="nav">
             <buttton id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu"
                 aria-expanded="false">
-                <span id="hambuguer"></span>
+                <span id="hamburguer"></span>
             </buttton>
             <ul id="menu" role="menu">
                 <li><a class="activeLink" id="linkSurrender" onclick="btnRestartGame()">Reiniciar JUEGO</a></li>
@@ -39,63 +40,66 @@
     <div id="paths">
 
         <div id="path1">
-
             <div class="contenedor_principal">
-    
-                <img src="../img/Enemies/orco.jpg">
-    
+                <img src="../img/enemies/orco.jpg">
                 <h2>
                     Te encontrabas durmiendo, cuando de repente escuchas ruido a metal golpear el suelo. <br>
                     Al abrir los ojos, delante de ti, un Orco mirandote fijamente, su mirada se cruza con la tuya, mientras observas como
                     se relame el labio. Su puño se cierra y se lanza sobre ti <br> <br>
                     Recuerdas tus años de entrenamiento, y te preparas para el combate
+                    <br><br>
+                    <p class="estadisticas" id="heroDicePath1"></p>
+                    <p class="estadisticas" id="enemyDicePath1"></p>
+                    <div class="contenedor_opciones_celular">
+                        <button class="choice3" onclick="btnAttackOrco()">ATACAR</button>
+                        <audio class="audioAttack" src=""></audio>
+                    </div>
                 </h2>
-    
-                <div class="contenedor_opciones_celular">
-                    <button class="choice3" onclick="btnAttackOrco()">ATACAR</button>
-
-                </div>
-    
             </div>
-    
             <div class="contenedor_opciones_tablet">
                 <button class="choice3" onclick="btnAttackOrco()">ATACAR</button>
-
+                <audio class="audioAttack" src=""></audio>
             </div>
-
-            <div id="down_bar">
-
-                <img class="imgCharacter" src="../img/Enemies/orcoSmall.jpg" style="display: block">
-                <p class="estadisticas" id="enemyStats"></p>
-        
-            </div>
-    
+            <audio class="enemyOrcDeath" src=""></audio>
         </div>
 
+        <div id="path2" style="display: none">
+            <div class="contenedor_principal">
+                <img src="../img/scene/houseInForest.jpg">
+                <h2>
+                    Luego de una gran lucha, te sientes cansado, y dolorido. Comienzas a caminar por el bosque
+                    sin un destino claro. A lo lejos, ves una ca
+                    <div class="contenedor_opciones_celular">
+                        <button class="choice1">ENTRAR</button>
+                        <button class="choice2">SEGUIR</button>
+                    </div>
+                </h2>
+
+            </div>
+            <div class="contenedor_opciones_tablet">
+                <button class="choice1">ENTRAR</button>
+                <button class="choice2">SEGUIR</button>
+            </div>
+        </div>
+
+        <div id="down_bar">
+            <img id="imgDownBar" class="imgCharacter" src="" style="display: block">
+            <p class="estadisticas" id="enemyStats"></p>
+        </div>
         
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
-    
 
     <!-- DIV QUE CONTIENE LA VENTANA CUANDO EL HEROE SE RINDE -->
     <div class="contenedor_principal" id="surrender" style="display: none">
-        <img src="../img/surrender.png">
+        
+            <img src="../img/surrender.png">
 
-        <button class="btnAgain">
-            <a class="activeLink" href="../index.html">COMENZAR DE NUEVO</a>
-        </button>
-        <h2 class="pjSurrender" id="pjSurrender">
+            <button class="btnAgain">
+                <a class="activeLink" href="../index.html">COMENZAR DE NUEVO</a>
+            </button>
+            <h2 class="pjSurrender" id="pjSurrender">
+            <audio class="audioSurrender" src=""></audio>
+
     </div>
 
     <!-- DIV QUE CONTIENE LA VENTANA CUANDO EL HEROE MUERE -->
@@ -106,12 +110,10 @@
             <a class="activeLink" href="../index.html">COMENZAR DE NUEVO</a>
         </button>
         <h2 class="pjDeath" id="pjDeath"></h2>
+        <audio class="audioDeath" src=""></audio>
+
     </div>
-
     
-
-    
-
     <script src="../js/burger_menu.js"></script>
 
 </body>

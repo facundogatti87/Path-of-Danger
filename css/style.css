@@ -123,6 +123,10 @@ footer {
     width: 100%;
 }
 
+.imgPj{
+    border: 1px solid black;
+}
+
 ul {
     display: flex;
     list-style: none;
@@ -242,16 +246,17 @@ h2 {
     font-size: 2.2rem;
     margin-left: 5px;
     color: white;
+    padding: 5px;
 }
 
 h3 {
-    font-size: 2.2rem;
-    color: black;
+    font-size: 2.1rem;
+    color: white;
 }
 
 h4 {
     font-size: 3rem;
-    text-shadow: 0 0 0.2em rgb(255 243 76), 0 0 0.2em rgb(255 0 0);
+    text-shadow: 0 0 0.2em rgb(255, 255, 255), 0 0 0.2em rgb(255, 255, 255);
 }
 
 h5{
@@ -352,7 +357,7 @@ h5{
 .pjForm {
     width: 100%;
     max-width: 100%;
-    background: rgba(255, 255, 255, 0.4);
+
     padding: 10px 10px 10px 10px;
 }
 
@@ -436,11 +441,11 @@ h5{
 
     h3{
         font-size: 1.5rem;
+
     }
 
     h4 {
         font-size: 2rem;
-        text-shadow: 0 0 0.2em rgb(255 243 76), 0 0 0.2em rgb(255 0 0);
     }
 
     .choice1, .choice2, choice3{
@@ -522,13 +527,13 @@ h5{
         gap: .5rem;
     }
 
-    #hambuguer {
+    #hamburguer {
         border-top: 2px solid;
         width: 20px;
     }
 
-    #hambuguer::before,
-    #hambuguer::after {
+    #hamburguer::before,
+    #hamburguer::after {
         content: '';
         display: flex;
         width: 20px;
@@ -539,15 +544,15 @@ h5{
         position: relative;
     }
 
-    #nav.active #hambuguer {
+    #nav.active #hamburguer {
         border-top-color: transparent;
     }
 
-    #nav.active #hambuguer::before {
+    #nav.active #hamburguer::before {
         transform: rotate(135deg);
     }
 
-    #nav.active #hambuguer::after {
+    #nav.active #hamburguer::after {
         transform: rotate(-135deg);
         top: -7px;
     }
