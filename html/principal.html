@@ -14,7 +14,7 @@
     
 </head>
 
-<body class="animate__animated animate__fadeIn" onload="Pj(), enemyOrco()">
+<body class="animate__animated animate__fadeIn" onload="Pj(), enemies()">
     
     <header id="top_bar">
 
@@ -52,14 +52,14 @@
                     <p class="estadisticas" id="heroDicePath1"></p>                
                     <p class="estadisticas" id="enemyDicePath1"></p>
                     <div class="contenedor_opciones_celular">
-                        <button class="choice3" onclick="btnAttackOrco()">atacar</button>
+                        <button class="choice3" onclick="btnAttackOrcoPath1()">atacar</button>
                         <audio class="audioAttack" src=""></audio>
                     </div>
                 </h2>
             </div>
             <div class="contenedor_opciones_tablet">
                 
-                <button class="choice3" onclick="btnAttackOrco()">atacar</button>                
+                <button class="choice3" onclick="btnAttackOrcoPath1()">atacar</button>                
                 <audio class="audioAttack" src=""></audio>
             </div>
             <audio class="enemyOrcDeath" src=""></audio>
@@ -144,18 +144,27 @@
             <div class="contenedor_principal">
                 <img src="../img/scene/path4/goblin.jpg">
                 <h2>
-                   DECIDISTE AYUDAR A LA PERSONA....  <!-- MODIFICAR ESTO -->
+                   Vas corriendo rápidamente hacia los arbustos y ves a un Goblin agarrando fuertemente a una mujer del brazo <br> <br>
+                   Das un fuerte grito y el Goblin la suelta, no te esperaba!
+                   Luego de analizarte, se dá cuenta que has luchado hace poco, ve la sangre correr por tus labios <br>
+                   Te percatas de que el Goblin no te tiene miedo, lo miras, limpias con tu mano la sangre, le sonries dices... <br> 
+                   ¿Estás preparado? <br>
+
+                   En la mujer nace la esperanza, y grita "Toma esta poción! Te ayudará!", lanza una pócima por el aire, 
+                   luego de agarrarla le quitas el corcho y la tomas <br>Te has curado 30 de vida
 
                     <div class="contenedor_opciones_celular">
-                        <button class="choice3" onclick="">CONTINUARA...</button> <!-- MODIFICAR ESTO -->
+                        <h2 class="estadisticas">VIDA +30</h2>
+                        <button class="choice3" onclick="btnCombatPath4()">al combate!</button>
                     </div>
                 </h2>
 
             </div>
             <div class="contenedor_opciones_tablet">
-                <button class="choice3" onclick="">CONTINUARA...</button> <!-- MODIFICAR ESTO -->
+                <h2 class="estadisticas">VIDA +30</h2>
+                <button class="choice3" onclick="btnCombatPath4()">al combate!</button>
             </div>
-
+            <audio class="enemyGoblin" src=""></audio>
         </div>
 
         <div id="path4.1" style="display: none">
@@ -166,47 +175,58 @@
                    Sigues para adelante, y un Goblin se acerca corriendo a ti! <br>
                    El te mira, y sabe que has luchado hace poco, es mas pequeño, pero no te tiene miedo.
                    
-                   Te das cuenta que cuelga de su boca ropa ensangrentada... <br><br>
+                   Te das cuenta que de su boca cuelga ropa ensangrentada... <br><br>
                    Has llegado tarde!... Por un momento piensas... <br>
-                   ¿Realmente necesitaba curarme?
+                   ¿Realmente necesitaba curarme? <br>
+                   ¿Quién era esa mujer? Nunca lo sabras... Sacas tu arma, y te preparas!
 
                     <div class="contenedor_opciones_celular">
-                        <button class="choice3" onclick="">CONTINUARA...</button>
+                        <button class="choice3" onclick="btnCombatPath41()">al combate!</button>
                     </div>
                 </h2>
 
             </div>
             <div class="contenedor_opciones_tablet">
-                <button class="choice3" onclick="">CONTINUARA...</button>
+                <button class="choice3" onclick="btnCombatPath41()">al combate!</button>
             </div>
-
+            <audio class="enemyGoblin" src=""></audio>
         </div>
 
+        <div id="path6" style="display: none">
+            <div class="contenedor_principal">
+                <img src="../img/scene/path4/goblin.jpg">
+                <h2>
+                   El Goblin observa como desenfundas tu arma, y se aprovecha de la situación! <br>
+                   Te arroja una daga, la cual logras esquivar, pero por poco... <br> <br>
 
+                   <br><br><br><br><br>
+                   <p class="estadisticas" id="heroDicePath6"></p>                
+                   <p class="estadisticas" id="enemyDicePath6"></p>
+                    <div class="contenedor_opciones_celular">
+                        <button class="choice3" onclick="btnAttackGoblinPath6()">atacar</button> <!-- MODIFICAR -->
+                    </div>
+                </h2>
 
+            </div>
+            <div class="contenedor_opciones_tablet">
+                <button class="choice3" onclick="btnAttackGoblinPath6()">atacar</button> <!-- MODIFICAR -->
+            </div>
+            <audio class="enemyGoblinDeath" src=""></audio>
+        </div>
 
+        <div id="path7" style="display: none">
+            <div class="contenedor_principal">
+                <img src="../img/firstBackground.jpg">
+                <h2>
+                   GANASTE!! GRACIAS POR PARTICIPAR DE ESTA PEQUEÑA GRAN AVENTURA ! <BR></BR>
+                   MAS CAPITULOS VENDRÁN !! NUESTROS ESCRITORES SE TOMARON UNAS VACACIONES, NO DESESPERES! <BR></BR>
 
+                   NUEVAMENTE GRACIAS POR TU TIEMPO, NOS VEMOS PRONTO!
 
+                </h2>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            </div>
+        </div>
 
         <div id="down_bar">
             <img id="imgDownBar" class="imgCharacterEnemy" src="" style="display: block">
