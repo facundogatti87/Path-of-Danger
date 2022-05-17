@@ -38,6 +38,16 @@ function Pj() {
         text = "VIDA: " + player.life + " FUERZA: " + player.strenght + " DEFENSA: " + player.defense;
         pjStats.innerHTML = text;
     }
+
+    else if (player.class == "Campesino") {
+
+        document.getElementById("imgCampesino").style.display = 'block'
+
+        var text;
+
+        text = "VIDA: " + player.life + " FUERZA: " + player.strenght + " DEFENSA: " + player.defense;
+        pjStats.innerHTML = text;
+    }
 }
 
 function enemyOrco() {
@@ -47,7 +57,7 @@ function enemyOrco() {
     orco = {
         name: "Orco",
         class: "Orco",
-        life: 1,
+        life: 65,
         strenght: 5,
         defense: 3,
     };
@@ -109,7 +119,7 @@ function btnAttackOrco() {
         document.getElementById("death").style.display = 'flex'
 
         var text;
-        text = "TODOS RECORDARÁN A " + localStorage.getItem('HeroName') + ", UN MARAVILLOSO " + localStorage.getItem('HeroClass') + " QUIEN DIO SU VIDA POR UNA GRAN AVENTURA" ;
+        text = "TODOS RECORDARÁN A " + localStorage.getItem('HeroName') + ", UN MARAVILLOSO Y VALIENTE " + localStorage.getItem('HeroClass') + " QUIEN DIO SU VIDA POR UNA GRAN AVENTURA" ;
         pjDeath.innerHTML = text;
 
         audio = document.querySelector(".audioDeath")

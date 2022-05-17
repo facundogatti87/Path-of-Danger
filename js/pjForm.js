@@ -28,9 +28,11 @@ function display() {
     document.getElementById("Berserker").style.display = 'block'
     document.getElementById("Templario").style.display = 'none'
     document.getElementById("Hechicero").style.display = 'none'
+    document.getElementById("Campesino").style.display = 'none'
     document.getElementById("jugar_img_berserker").style.display = 'block'
     document.getElementById("jugar_img_templario").style.display = 'none'
     document.getElementById("jugar_img_hechicero").style.display = 'none'
+    document.getElementById("jugar_img_campesino").style.display = 'none'
 
     player.class = "Berserker";
     player.life = 100;
@@ -43,9 +45,11 @@ function display() {
     document.getElementById("Berserker").style.display = 'none'
     document.getElementById("Templario").style.display = 'block'
     document.getElementById("Hechicero").style.display = 'none'
+    document.getElementById("Campesino").style.display = 'none'
     document.getElementById("jugar_img_berserker").style.display = 'none'
     document.getElementById("jugar_img_templario").style.display = 'block'
     document.getElementById("jugar_img_hechicero").style.display = 'none'
+    document.getElementById("jugar_img_campesino").style.display = 'none'
 
     player.class = "Templario";
     player.life = 120;
@@ -58,14 +62,33 @@ function display() {
     document.getElementById("Berserker").style.display = 'none'
     document.getElementById("Templario").style.display = 'none'
     document.getElementById("Hechicero").style.display = 'block'
+    document.getElementById("Campesino").style.display = 'none'
     document.getElementById("jugar_img_berserker").style.display = 'none'
     document.getElementById("jugar_img_templario").style.display = 'none'
     document.getElementById("jugar_img_hechicero").style.display = 'block'
+    document.getElementById("jugar_img_campesino").style.display = 'none'
 
     player.class = "Hechicero";
     player.life = 70;
     player.strenght = 12;
     player.defense = 3;
+
+  }
+
+  else if (index == 3) {
+    document.getElementById("Berserker").style.display = 'none'
+    document.getElementById("Templario").style.display = 'none'
+    document.getElementById("Hechicero").style.display = 'none'
+    document.getElementById("Campesino").style.display = 'block'
+    document.getElementById("jugar_img_berserker").style.display = 'none'
+    document.getElementById("jugar_img_templario").style.display = 'none'
+    document.getElementById("jugar_img_hechicero").style.display = 'none'
+    document.getElementById("jugar_img_campesino").style.display = 'block'
+
+    player.class = "Campesino";
+    player.life = 35;
+    player.strenght = 2;
+    player.defense = 1;
 
   }
 }
@@ -93,6 +116,7 @@ function pjForm() {
     document.getElementById("Berserker").style.display = 'none'
     document.getElementById("Templario").style.display = 'none'
     document.getElementById("Hechicero").style.display = 'none'
+    document.getElementById("Campesino").style.display = 'none'
     document.getElementById("inicioDeJuego").style.display = 'block'
 
     player.name = pjName;
