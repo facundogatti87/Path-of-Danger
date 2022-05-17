@@ -243,7 +243,7 @@ li a:hover {
 /************************************* FUENTES *************************************/
 
 h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-left: 5px;
     color: white;
     padding: 5px;
@@ -268,6 +268,12 @@ h5{
     margin: 5px;
     color: white;
     text-shadow: 0 0 0.2em rgb(255 0 0), 0 0 0.2em rgb(255 255 255);
+}
+
+.resaltadoInstrucciones{
+    font-size: 2.2rem;
+    color: red;
+    text-shadow: 0 0 0.2em rgb(0, 0, 0);
 }
 
 /************************************* ID'S *************************************/
@@ -580,6 +586,10 @@ h5{
     }
 
     .estadisticas{
+        font-size: 1.4rem;
+    }
+
+    .resaltadoInstrucciones{
         font-size: 1.4rem;
     }
 
