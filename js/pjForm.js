@@ -3,8 +3,8 @@ player = {
   name: "",
   class: "Berserker",
   life: 100,
-  strenght: 9,
-  defense: 5,
+  strenght: 8,
+  defense: 4,
 };  
 
 firstName = ["Frederic", "Willie", "Kirnon", "Salvatore", "Caesar", "Desmond", "Lucius", "Ragnar", "Ash", "Duradel", "Treznor", "Titus", "Duke", "Patrick", "Max", "Franz", "Chandler", "Finch", "Theodor", "Vossler", "Seymour", "Adam", "Ulrik", "Alder", "Camus", "Quint", "Klark", "Ethel", "Zeke", "Dexter", "Lucifer", "Charles", "Icas", "Camus", "Viktor", "Hades", "Leviathan", "Ross", "Bane", "Kaiser", "Vance", "Romulus"]
@@ -34,8 +34,8 @@ function display() {
 
     player.class = "Berserker";
     player.life = 100;
-    player.strenght = 9;
-    player.defense = 5;
+    player.strenght = 8;
+    player.defense = 4;
 
   }
 
@@ -49,8 +49,8 @@ function display() {
 
     player.class = "Templario";
     player.life = 120;
-    player.strenght = 6;
-    player.defense = 8;
+    player.strenght = 5;
+    player.defense = 5;
 
   }
 
@@ -65,7 +65,7 @@ function display() {
     player.class = "Hechicero";
     player.life = 70;
     player.strenght = 12;
-    player.defense = 4;
+    player.defense = 3;
 
   }
 }

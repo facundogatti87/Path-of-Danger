@@ -47,8 +47,8 @@ function enemyOrco() {
     orco = {
         name: "Orco",
         class: "Orco",
-        life: 65,
-        strenght: 7,
+        life: 1,
+        strenght: 5,
         defense: 3,
     };
     
@@ -144,6 +144,7 @@ function btnAttackOrco() {
 
 }
 
+
 function btnRestartGame() {
     if (confirm("¿Estás seguro que querés reiniciar tu aventura?")) {
 
@@ -164,4 +165,52 @@ function btnRestartGame() {
 
     } else {
     }
+}
+
+
+function btnEnterHutPath2(){
+    document.getElementById("path2").style.display = "none"
+    document.getElementById("path3").style.display = "block"
+
+    audio = document.querySelector(".doorOpening")
+    audio.setAttribute("src", "../sounds/doorOpening.mp3")
+    audio.play()
+}
+
+
+function btnHealPath3(){
+    document.getElementById("path3").style.display = "none"
+    document.getElementById("path5").style.display = "block"
+
+    audio = document.querySelector(".bandAid")
+    audio.setAttribute("src", "../sounds/bandAid.mp3")
+    audio.play()
+
+    heroLife = localStorage.getItem('HeroLife');
+    heroLife = parseInt(heroLife);
+    heroLife = heroLife+15;
+    localStorage.setItem("HeroLife", heroLife);
+
+    var textPlayer;
+
+    textPlayer = "VIDA: " + localStorage.getItem('HeroLife') + " FUERZA: " + localStorage.getItem('HeroStrenght') + " DEFENSA: " + localStorage.getItem('HeroDefense');
+    pjStats.innerHTML = textPlayer;
+
+}
+
+function btnExitPath5(){
+    document.getElementById("path5").style.display = "none"
+    document.getElementById("path4.1").style.display = "block"
+
+}
+
+function btnHelpPath2(){
+    document.getElementById("path2").style.display = "none"
+    document.getElementById("path4").style.display = "block"
+}
+
+function btnHelpPath3(){
+    document.getElementById("path3").style.display = "none"
+    document.getElementById("path4").style.display = "block"
+
 }
