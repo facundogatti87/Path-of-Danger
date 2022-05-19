@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="../js/rightClick.js"></script>
     <script src="../js/principal.js"></script>
-    
+
 </head>
 
 <body class="animate__animated animate__fadeIn" onload="Pj(), enemies()">
-    
+
     <header id="top_bar">
 
         <img class="imgCharacterPj" id="imgBerserker" src="../img/PJ/berserkerSmall.jpg" style="display: none">
@@ -44,12 +44,23 @@
             <div class="contenedor_principal">
                 <img src="../img/enemies/orco.jpg">
                 <h2>
-                    Te encuentras durmiendo, cuando de repente escuchas ruido a metal golpear el suelo. <br> <br>
-                    Al abrir los ojos, delante de ti, un Orco mirándote fijamente, su mirada se cruza con la tuya y sus labios gotean
-                    sed de sangre, mientras observas como se relame el labio su puño se cierra y se lanza sobre ti con un frénesi implacable <br> <br>
+                    Te encuentras durmiendo, cuando de repente escuchas ruido a metal golpear el suelo.
+                    <img class="icon" src="../img/soundIcon.png" onclick="btnPath1MetalSound()">
+                    <audio class="btnPath1MetalSound" src=""></audio>
+
+                    <br> <br>
+
+                    Al abrir los ojos, delante de ti, un Orco mirándote fijamente, su mirada se cruza con la tuya y sus
+                    labios gotean
+                    sed de sangre, mientras observas como se relame el labio su puño se cierra y se lanza sobre ti con
+                    un frénesi implacable
+                    <img class="icon" src="../img/soundIcon.png" onclick="btnPath1OrcSound()">
+                    <audio class="btnPath1OrcSound" src=""></audio>
+
+                    <br> <br>
                     Recuerdas tus años de entrenamiento, y te preparas para el combate
                     <br><br>
-                    <p class="estadisticas" id="heroDicePath1"></p>                
+                    <p class="estadisticas" id="heroDicePath1"></p>
                     <p class="estadisticas" id="enemyDicePath1"></p>
                     <div class="contenedor_opciones_celular">
                         <button class="choice3" onclick="btnAttackOrcoPath1()">atacar</button>
@@ -58,34 +69,43 @@
                 </h2>
             </div>
             <div class="contenedor_opciones_tablet">
-                
-                <button class="choice3" onclick="btnAttackOrcoPath1()">atacar</button>                
+
+                <button class="choice3" onclick="btnAttackOrcoPath1()">atacar</button>
                 <audio class="audioAttack" src=""></audio>
             </div>
             <audio class="enemyOrcDeath" src=""></audio>
-            
+
         </div>
 
         <div id="path2" style="display: none">
             <div class="contenedor_principal">
                 <img src="../img/scene/path2/houseInForest.jpg">
                 <h2>
-                    Ha sido una lucha intensa, ese maldito Orco te agarró desprevenido... Eres fuerte y hábil, pero te sientes cansado, y dolorido. <br>
+                    Ha sido una lucha intensa, ese maldito Orco te agarró desprevenido... Eres fuerte y hábil, pero te
+                    sientes cansado, y dolorido. <br>
                     Te preguntas donde estás... <br> <br>
-                    Comienzas a caminar, y luego de unos minutos, a lo lejos, te encuentras con una pequeña cabaña. <br> <br>
-                    Tiene las luces prendidas, ¿estará inhabitada? ... Te acercas de a poco, y escuchas un grito a lo lejos! <br>
+                    Comienzas a caminar, y luego de unos minutos, a lo lejos, te encuentras con una pequeña cabaña. <br>
+                    <br>
+                    Tiene las luces prendidas, ¿estará inhabitada? ... Te acercas de a poco, y escuchas un grito a lo
+                    lejos!
+                    <img class="icon" src="../img/soundIcon.png" onclick="btnPath2ScreamSound()">
+                    <audio class="btnPath2ScreamSound" src=""></audio>
+
+                    <br>
                     Volteas rapidamente y ves un goblin esconderse entre los arboles.
+                    <img class="icon" src="../img/soundIcon.png" onclick="btnPath2BushesSound()">
+                    <audio class="btnPath2BushesSound" src=""></audio>
 
                     <div class="contenedor_opciones_celular">
                         <button class="choice1" onclick="btnEnterHutPath2()">entrar a cabaña</button>
-                        <button class="choice2" onclick="btnHelpPath2()">perseguir goblin</button> <!-- MODIFICAR ESTO -->
+                        <button class="choice2" onclick="btnHelpPath2()">perseguir goblin</button>
                     </div>
                 </h2>
 
             </div>
             <div class="contenedor_opciones_tablet">
                 <button class="choice1" onclick="btnEnterHutPath2()">entrar a cabaña</button>
-                <button class="choice2" onclick="btnHelpPath2()">perseguir goblin</button> <!-- MODIFICAR ESTO -->
+                <button class="choice2" onclick="btnHelpPath2()">perseguir goblin</button>
             </div>
         </div>
 
@@ -93,14 +113,21 @@
             <div class="contenedor_principal">
                 <img src="../img/scene/path3/insideHut.jpg">
                 <h2>
-                   Te sientes muy herido como para ir a socorrer a quien esté gritando. Entras en la cabaña en busca de refugio <br>
-                   Levantas la mirada, y te sientes maravillado por lo que ves, una biblioteca 
-                   enorme, y muchas pociones... ¿vivirá alguien aquí? <br>
-                   <br>
-                   La curiosidad te gana y empiezas a hurgar entre las pociones, no encuentras nada de utilidad...
-                   Sigues buscando, y encuentras unas vendas... Debes curarte <br><br>
+                    Te sientes muy herido como para ir a socorrer a quien esté gritando. Entras en la cabaña en busca de
+                    refugio <br>
+                    Levantas la mirada, y te sientes maravillado por lo que ves, una biblioteca
+                    enorme, y muchas pociones... ¿vivirá alguien aquí? <br>
+                    <br>
+                    La curiosidad te gana y empiezas a hurgar entre algunos cajones, no encuentras nada de utilidad...
+                    <img class="icon" src="../img/soundIcon.png" onclick="btnPath3SearchSound()">
+                    <audio class="btnPath3SearchSound" src=""></audio>
+                    <br>
 
-                   Comienzas a vendarte y escuchas nuevamente gritos, esta vez, con claridad! Es una mujer pidiendo socorro
+                    Sigues buscando, y encuentras unas vendas... Debes curarte <br><br>
+
+                    Escuchas nuevamente gritos!
+                    <img class="icon" src="../img/soundIcon.png" onclick="btnPath3ScreamSound()">
+                    <audio class="btnPath3ScreamSound" src=""></audio>
 
                     <div class="contenedor_opciones_celular">
                         <button class="choice1" onclick="btnHealPath3()">vendarse</button>
@@ -116,42 +143,30 @@
             <audio class="doorOpening" src=""></audio>
         </div>
 
-        <div id="path5" style="display: none">
-            <div class="contenedor_principal">
-                <img src="../img/scene/path5/bandAid.jpg">
-                <h2>
-                   Comienzas a vendarte los brazos, son varios los cortes que te quedaron luego de la batalla que tuviste. <br> <br>
-                   Luego de unos minutos te sientes mejor... Te curaste 15 de vida <br> <br>
-                   Ves que hay varias pociones sobre un estante, pero no te atreves a tocarlas, no sabes que podria pasar... <br><br>
-                   Intentas leer algunos libros, pero el idioma lo desconoces... <br> <br>
-                   Te das cuenta que ya no se escuchan los gritos, decides ir a explorar a donde viste el Goblin por ultima vez
-
-                    <div class="contenedor_opciones_celular">
-                        <h2 class="estadisticas">VIDA +15</h2>
-                        <button class="choice3" onclick="btnExitPath5()">continuar</button>
-                    </div>
-                </h2>
-
-            </div>
-            <div class="contenedor_opciones_tablet">
-                <h2 class="estadisticas">VIDA +15</h2>
-                <button class="choice3" onclick="btnExitPath5()">continuar</button>
-            </div>
-            <audio class="bandAid" src=""></audio>
-        </div>
-
         <div id="path4" style="display: none">
             <div class="contenedor_principal">
                 <img src="../img/scene/path4/goblin.jpg">
                 <h2>
-                   Vas corriendo rápidamente hacia los arbustos y ves a un Goblin agarrando fuertemente a una mujer del brazo <br> <br>
-                   Das un fuerte grito y el Goblin la suelta, no te esperaba!
-                   Luego de analizarte, se dá cuenta que has luchado hace poco, ve la sangre correr por tus labios <br>
-                   Te percatas de que el Goblin no te tiene miedo, lo miras, limpias con tu mano la sangre, le sonries dices... <br> 
-                   ¿Estás preparado? <br>
+                    Vas corriendo rápidamente hacia los arbustos y ves a un Goblin agarrando fuertemente a una mujer del
+                    brazo <br> <br>
+                    Das un fuerte grito y el Goblin la suelta, no te esperaba!
+                    <img class="icon" src="../img/soundIcon.png" onclick="btnPath4HeySound()">
+                    <audio class="btnPath4HeySound" src=""></audio>
+                    <br>
 
-                   En la mujer nace la esperanza, y grita "Toma esta poción! Te ayudará!", lanza una pócima por el aire, 
-                   luego de agarrarla le quitas el corcho y la tomas <br>Te has curado 30 de vida
+                    Luego de analizarte, se dá cuenta que has luchado hace poco, ve la sangre correr por tus labios <br>
+                    Te percatas de que el Goblin no te tiene miedo, lo miras, limpias con tu mano la sangre, le sonries
+                    dices... <br>
+                    ¿Estás preparado? <br>
+
+                    En la mujer nace la esperanza, y grita "Toma esta poción! Te ayudará!", lanza una pócima por el
+                    aire,
+                    luego de agarrarla le quitas el corcho y la tomas
+                    <img class="icon" src="../img/soundIcon.png" onclick="btnPath4PotionSound()">
+                    <audio class="btnPath4PotionSound" src=""></audio>
+
+                    <br>
+                    Te has curado 30 de vida
 
                     <div class="contenedor_opciones_celular">
                         <h2 class="estadisticas">VIDA +30</h2>
@@ -171,14 +186,25 @@
             <div class="contenedor_principal">
                 <img src="../img/scene/path4/goblin.jpg">
                 <h2>
-                   Te acercas lentamente a los arbustos en donde viste al Goblin por ultima vez. Sacas tu arma, rompes algunas ramas y logras pasar. <br>
-                   Sigues para adelante, y un Goblin se acerca corriendo a ti! <br>
-                   El te mira, y sabe que has luchado hace poco, es mas pequeño, pero no te tiene miedo.
-                   
-                   Te das cuenta que de su boca cuelga ropa ensangrentada... <br><br>
-                   Has llegado tarde!... Por un momento piensas... <br>
-                   ¿Realmente necesitaba curarme? <br>
-                   ¿Quién era esa mujer? Nunca lo sabras... Sacas tu arma, y te preparas!
+                    Te acercas lentamente a los arbustos en donde viste al Goblin por ultima vez. Sacas tu arma, rompes
+                    algunas ramas y logras pasar.
+                    <img class="icon" src="../img/soundIcon.png" onclick="btnPath41BushesSound()">
+                    <audio class="btnPath41BushesSound" src=""></audio>
+
+                    <br>
+                    Sigues para adelante, y un Goblin se acerca corriendo a ti!
+                    <img class="icon" src="../img/soundIcon.png" onclick="btnPath41RunningSound()">
+                    <audio class="btnPath41RunningSound" src=""></audio>
+
+                    <br>
+                    El te mira, y sabe que has luchado hace poco, es mas pequeño, pero no te tiene miedo.
+
+                    Te das cuenta que de su boca cuelga ropa ensangrentada... <br><br>
+                    Has llegado tarde!... Por un momento piensas... <br>
+                    ¿Realmente necesitaba curarme? <br>
+                    ¿Quién era esa mujer? Nunca lo sabras... Sacas tu arma, y te preparas!
+                    <img class="icon" src="../img/soundIcon.png" onclick="btnPath41UnsheatheSound()">
+                    <audio class="btnPath41UnsheatheSound" src=""></audio>
 
                     <div class="contenedor_opciones_celular">
                         <button class="choice3" onclick="btnCombatPath41()">al combate!</button>
@@ -192,24 +218,55 @@
             <audio class="enemyGoblin" src=""></audio>
         </div>
 
-        <div id="path6" style="display: none">
+        <div id="path5" style="display: none">
             <div class="contenedor_principal">
-                <img src="../img/scene/path4/goblin.jpg">
+                <img src="../img/scene/path5/bandAid.jpg">
                 <h2>
-                   El Goblin observa como desenfundas tu arma, y se aprovecha de la situación! <br>
-                   Te arroja una daga, la cual logras esquivar, pero por poco... <br> <br>
+                    Comienzas a vendarte los brazos, son varios los cortes que te quedaron luego de la batalla que
+                    tuviste. <br> <br>
+                    Luego de unos minutos te sientes mejor... Te curaste 15 de vida <br> <br>
+                    Ves que hay varias pociones sobre un estante, pero no te atreves a tocarlas, no sabes que podria
+                    pasar... <br><br>
+                    Intentas leer algunos libros, pero el idioma lo desconoces...
+                    <img class="icon" src="../img/soundIcon.png" onclick="btnPath5PagesSound()">
+                    <audio class="btnPath5PagesSound" src=""></audio>
 
-                   <br><br><br><br><br>
-                   <p class="estadisticas" id="heroDicePath6"></p>                
-                   <p class="estadisticas" id="enemyDicePath6"></p>
+                    <br> <br>
+                    Te das cuenta que ya no se escuchan los gritos, decides ir a explorar a donde viste el Goblin por
+                    ultima vez
+
                     <div class="contenedor_opciones_celular">
-                        <button class="choice3" onclick="btnAttackGoblinPath6()">atacar</button> <!-- MODIFICAR -->
+                        <h2 class="estadisticas">VIDA +15</h2>
+                        <button class="choice3" onclick="btnExitPath5()">continuar</button>
                     </div>
                 </h2>
 
             </div>
             <div class="contenedor_opciones_tablet">
-                <button class="choice3" onclick="btnAttackGoblinPath6()">atacar</button> <!-- MODIFICAR -->
+                <h2 class="estadisticas">VIDA +15</h2>
+                <button class="choice3" onclick="btnExitPath5()">continuar</button>
+            </div>
+            <audio class="bandAid" src=""></audio>
+        </div>
+
+        <div id="path6" style="display: none">
+            <div class="contenedor_principal">
+                <img src="../img/scene/path4/goblin.jpg">
+                <h2>
+                    El Goblin observa como desenfundas tu arma, y se aprovecha de la situación! <br>
+                    Te arroja una daga, la cual logras esquivar, pero por poco... <br> <br>
+
+                    <br><br><br><br><br>
+                    <p class="estadisticas" id="heroDicePath6"></p>
+                    <p class="estadisticas" id="enemyDicePath6"></p>
+                    <div class="contenedor_opciones_celular">
+                        <button class="choice3" onclick="btnAttackGoblinPath6()">atacar</button>
+                    </div>
+                </h2>
+
+            </div>
+            <div class="contenedor_opciones_tablet">
+                <button class="choice3" onclick="btnAttackGoblinPath6()">atacar</button>
             </div>
             <audio class="enemyGoblinDeath" src=""></audio>
         </div>
@@ -218,10 +275,18 @@
             <div class="contenedor_principal">
                 <img src="../img/firstBackground.jpg">
                 <h2>
-                   GANASTE!! GRACIAS POR PARTICIPAR DE ESTA PEQUEÑA GRAN AVENTURA ! <BR></BR>
-                   MAS CAPITULOS VENDRÁN !! NUESTROS ESCRITORES SE TOMARON UNAS VACACIONES, NO DESESPERES! <BR></BR>
+                    GANASTE!! GRACIAS POR PARTICIPAR DE ESTA PEQUEÑA GRAN AVENTURA !
+                    <br>
+                    <img class="icon" src="../img/soundIcon.png" onclick="btnPath7AplauseSound()">
+                    <audio class="btnPath7AplauseSound" src=""></audio>
 
-                   NUEVAMENTE GRACIAS POR TU TIEMPO, NOS VEMOS PRONTO!
+                    <BR></BR>
+                    MAS CAPITULOS VENDRÁN !! NUESTROS ESCRITORES SE TOMARON UNAS VACACIONES, NO DESESPERES! <BR></BR>
+
+                    NUEVAMENTE GRACIAS POR TU TIEMPO, NOS VEMOS PRONTO!
+
+                    Haz clic en <a class="estadisticas" href="../html/jugar.html">&nbsp;&nbsp;&nbsp;JUGAR&nbsp;&nbsp;&nbsp;</a>para comenzar otra
+                    aventura <br>
 
                 </h2>
 
@@ -232,18 +297,18 @@
             <img id="imgDownBar" class="imgCharacterEnemy" src="" style="display: block">
             <p class="estadisticas" id="enemyStats"></p>
         </div>
-        
+
     </div>
 
     <!-- DIV QUE CONTIENE LA VENTANA CUANDO EL HEROE SE RINDE -->
     <div class="contenedor_principal" id="surrender" style="display: none">
-        
-            <img src="../img/surrender.png">
 
-            <button class="btnAgain">
-                <a class="activeLink" href="../index.html">COMENZAR DE NUEVO</a>
-            </button>
-            <h2 class="pjSurrender" id="pjSurrender">
+        <img src="../img/surrender.png">
+
+        <button class="btnAgain">
+            <a class="activeLink" href="../index.html">COMENZAR DE NUEVO</a>
+        </button>
+        <h2 class="pjSurrender" id="pjSurrender">
             <audio class="audioSurrender" src=""></audio>
 
     </div>
@@ -259,7 +324,7 @@
         <audio class="audioDeath" src=""></audio>
 
     </div>
-    
+
     <script src="../js/burger_menu.js"></script>
 
 </body>

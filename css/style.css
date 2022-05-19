@@ -142,6 +142,11 @@ li a:hover {
     text-shadow: 0 0 0.5em rgb(255, 136, 0), 0 0 0.5em rgb(255, 136, 0);
 }
 
+.icon{
+    height: 2rem!important;
+    cursor: pointer!important;
+}
+
 .contenedor_principal {
     display: flex;
     margin: 15px 20px;
@@ -163,16 +168,6 @@ li a:hover {
     display: none;
     margin: 15px 20px;
     border-radius: 7px;
-}
-
-.icon_small {
-    width: 3%;
-    position: fixed;
-}
-
-.icon_medium {
-    width: 6%;
-    position: fixed;
 }
 
 .activeLink{
@@ -468,21 +463,17 @@ h5{
         font-size: 1rem;
     }
 
-    .icon_small, .icon_medium {
-        visibility: hidden;
-    }
-
     .contenedor_principal {
         display: flex;
         position: relative;
-        height: 67vh;
+        height: 61vh;
         background-color: rgba(0, 0, 0, 0.72);
     }
 
-    .contenedor_principal img {
+    /* .contenedor_principal img {
         display: flex;
         object-fit: cover;
-    }
+    } */
 
     .contact_form {
         top: 17%;
@@ -583,6 +574,12 @@ h5{
 
     h2 {
         font-size: 1.4rem;
+    }
+
+    .icon{
+        width: 2rem!important;
+        z-index: 1!important;
+        display: initial!important;
     }
 
     .estadisticas{

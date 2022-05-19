@@ -71,8 +71,8 @@ function enemies() {
     goblin = {
         name: "Goblin",
         class: "Goblin",
-        life: 35,
-        strenght: 3,
+        life: 45,
+        strenght: 4,
         defense: 2,
     };
     
@@ -92,11 +92,53 @@ function enemies() {
 
 }
 
-function btnAttackOrcoPath1() {
-    audio = document.querySelector(".audioAttack")
-    audio.setAttribute("src", "../sounds/cut1.mp3")
-    audio.play()
+function attackSound() {
+    let x = Math.floor(Math.random()*(4-1))+1
 
+    if (x == 1) {
+        audio = document.querySelector(".audioAttack")
+        audio.setAttribute("src", "../sounds/cut1.mp3")
+        audio.play()
+    }
+
+    if (x == 2) {
+        audio = document.querySelector(".audioAttack")
+        audio.setAttribute("src", "../sounds/cut2.mp3")
+        audio.play()
+    }
+
+    if (x == 3) {
+        audio = document.querySelector(".audioAttack")
+        audio.setAttribute("src", "../sounds/cut3.mp3")
+        audio.play()
+    }
+}
+
+function checkPjDeath(){
+    if (localStorage.getItem("HeroLife") <= 0) {
+        
+        localStorage.setItem("HeroLife", 1);
+        localStorage.setItem("HeroStrenght", 0);
+        localStorage.setItem("HeroDefense", 0);
+        document.getElementById("top_bar").style.display = 'none'
+        document.getElementById("paths").style.display = 'none'
+        document.getElementById("death").style.display = 'flex'
+
+        var text;
+        text = "TODOS RECORDARÁN A " + localStorage.getItem('HeroName') + ", UN MARAVILLOSO Y VALIENTE " + localStorage.getItem('HeroClass') + " QUIEN DIO SU VIDA POR UNA GRAN AVENTURA" ;
+        pjDeath.innerHTML = text;
+
+        audio = document.querySelector(".audioDeath")
+        audio.setAttribute("src", "../sounds/pjDeath.mp3")
+        audio.play()
+
+    }
+}
+
+function btnAttackOrcoPath1() {
+
+    attackSound();
+    
     heroLife = localStorage.getItem('HeroLife');
     heroStrenght = localStorage.getItem('HeroStrenght');
     heroDefense = localStorage.getItem('HeroDefense');
@@ -125,24 +167,7 @@ function btnAttackOrcoPath1() {
     heroDicePath1.innerHTML = "Dado Héroe: " + heroRandomDice + " ---> Daño: " + heroDamage *-1;
     enemyDicePath1.innerHTML = "Dado Enemigo: " + enemyRandomDice + " ---> Daño: " + enemyDamage *-1;
 
-    if (localStorage.getItem("HeroLife") <= 0) {
-        
-        localStorage.setItem("HeroLife", 1);
-        localStorage.setItem("HeroStrenght", 0);
-        localStorage.setItem("HeroDefense", 0);
-        document.getElementById("top_bar").style.display = 'none'
-        document.getElementById("paths").style.display = 'none'
-        document.getElementById("death").style.display = 'flex'
-
-        var text;
-        text = "TODOS RECORDARÁN A " + localStorage.getItem('HeroName') + ", UN MARAVILLOSO Y VALIENTE " + localStorage.getItem('HeroClass') + " QUIEN DIO SU VIDA POR UNA GRAN AVENTURA" ;
-        pjDeath.innerHTML = text;
-
-        audio = document.querySelector(".audioDeath")
-        audio.setAttribute("src", "../sounds/pjDeath.mp3")
-        audio.play()
-
-    }
+    checkPjDeath();
 
     if (localStorage.getItem("OrcoLife") <= 0) {
 
@@ -169,9 +194,8 @@ function btnAttackOrcoPath1() {
 }
 
 function btnAttackGoblinPath6() {
-    audio = document.querySelector(".audioAttack")
-    audio.setAttribute("src", "../sounds/cut1.mp3")
-    audio.play()
+
+    attackSound();
 
     heroLife = localStorage.getItem('HeroLife');
     heroStrenght = localStorage.getItem('HeroStrenght');
@@ -201,24 +225,7 @@ function btnAttackGoblinPath6() {
     heroDicePath6.innerHTML = "Dado Héroe: " + heroRandomDice + " ---> Daño: " + heroDamage *-1;
     enemyDicePath6.innerHTML = "Dado Enemigo: " + enemyRandomDice + " ---> Daño: " + enemyDamage *-1;
 
-    if (localStorage.getItem("HeroLife") <= 0) {
-        
-        localStorage.setItem("HeroLife", 1);
-        localStorage.setItem("HeroStrenght", 0);
-        localStorage.setItem("HeroDefense", 0);
-        document.getElementById("top_bar").style.display = 'none'
-        document.getElementById("paths").style.display = 'none'
-        document.getElementById("death").style.display = 'flex'
-
-        var text;
-        text = "TODOS RECORDARÁN A " + localStorage.getItem('HeroName') + ", UN MARAVILLOSO Y VALIENTE " + localStorage.getItem('HeroClass') + " QUIEN DIO SU VIDA POR UNA GRAN AVENTURA" ;
-        pjDeath.innerHTML = text;
-
-        audio = document.querySelector(".audioDeath")
-        audio.setAttribute("src", "../sounds/pjDeath.mp3")
-        audio.play()
-
-    }
+    checkPjDeath();
 
     if (localStorage.getItem("GoblinLife") <= 0) {
 
@@ -231,6 +238,8 @@ function btnAttackGoblinPath6() {
         audio.play()
 
         document.getElementById("down_bar").style.display = 'none'
+        document.getElementById("btn-mobile").style.display = 'none'
+        
     }
 
     var textPlayer;
@@ -295,7 +304,6 @@ function btnHealPath3(){
 
     textPlayer = "VIDA: " + localStorage.getItem('HeroLife') + " FUERZA: " + localStorage.getItem('HeroStrenght') + " DEFENSA: " + localStorage.getItem('HeroDefense');
     pjStats.innerHTML = textPlayer;
-
 }
 
 function btnExitPath5(){
@@ -305,7 +313,6 @@ function btnExitPath5(){
     audio = document.querySelector(".enemyGoblin")
     audio.setAttribute("src", "../sounds/enemyGoblin.mp3")
     audio.play()
-
 }
 
 function btnHelpPath2(){
@@ -344,8 +351,6 @@ function btnHelpPath3(){
     audio = document.querySelector(".enemyGoblin")
     audio.setAttribute("src", "../sounds/enemyGoblin.mp3")
     audio.play()
-
-
 }
 
 function btnCombatPath41(){
@@ -357,7 +362,6 @@ function btnCombatPath41(){
 
     text = "VIDA: " + localStorage.getItem("GoblinLife", goblin.life) + " FUERZA: " + localStorage.getItem("GoblinStrenght", goblin.strenght) + " DEFENSA: " + localStorage.getItem("GoblinDefense", goblin.defense);
     enemyStats.innerHTML = text;
-    
 }
 
 function btnCombatPath4(){
@@ -369,4 +373,83 @@ function btnCombatPath4(){
 
     text = "VIDA: " + localStorage.getItem("GoblinLife", goblin.life) + " FUERZA: " + localStorage.getItem("GoblinStrenght", goblin.strenght) + " DEFENSA: " + localStorage.getItem("GoblinDefense", goblin.defense);
     enemyStats.innerHTML = text;
+}
+
+//ICONOS DE SONIDOS
+function btnPath1MetalSound(){
+    audio = document.querySelector(".btnPath1MetalSound")
+    audio.setAttribute("src", "../sounds/btnPath1MetalSound.mp3")
+    audio.play()
+}
+
+function btnPath1OrcSound(){
+    audio = document.querySelector(".btnPath1OrcSound")
+    audio.setAttribute("src", "../sounds/btnPath1OrcSound.mp3")
+    audio.play()
+}
+
+function btnPath2ScreamSound(){
+    audio = document.querySelector(".btnPath2ScreamSound")
+    audio.setAttribute("src", "../sounds/btnPath2ScreamSound.mp3")
+    audio.play()
+}
+
+function btnPath2BushesSound(){
+    audio = document.querySelector(".btnPath2BushesSound")
+    audio.setAttribute("src", "../sounds/btnPath2BushesSound.mp3")
+    audio.play()
+}
+
+function btnPath3ScreamSound(){
+    audio = document.querySelector(".btnPath3ScreamSound")
+    audio.setAttribute("src", "../sounds/btnPath3ScreamSound.mp3")
+    audio.play()
+}
+
+function btnPath3SearchSound(){
+    audio = document.querySelector(".btnPath3SearchSound")
+    audio.setAttribute("src", "../sounds/btnPath3SearchSound.mp3")
+    audio.play()
+}
+
+function btnPath4HeySound(){
+    audio = document.querySelector(".btnPath4HeySound")
+    audio.setAttribute("src", "../sounds/btnPath4HeySound.mp3")
+    audio.play()
+}
+
+function btnPath4PotionSound(){
+    audio = document.querySelector(".btnPath4PotionSound")
+    audio.setAttribute("src", "../sounds/btnPath4PotionSound.mp3")
+    audio.play()
+}
+
+function btnPath41BushesSound(){
+    audio = document.querySelector(".btnPath41BushesSound")
+    audio.setAttribute("src", "../sounds/btnPath41BushesSound.mp3")
+    audio.play()
+}
+
+function btnPath41RunningSound(){
+    audio = document.querySelector(".btnPath41RunningSound")
+    audio.setAttribute("src", "../sounds/btnPath41RunningSound.mp3")
+    audio.play()
+}
+
+function btnPath41UnsheatheSound(){
+    audio = document.querySelector(".btnPath41UnsheatheSound")
+    audio.setAttribute("src", "../sounds/btnPath41UnsheatheSound.mp3")
+    audio.play()
+}
+
+function btnPath5PagesSound(){
+    audio = document.querySelector(".btnPath5PagesSound")
+    audio.setAttribute("src", "../sounds/btnPath5PagesSound.mp3")
+    audio.play()
+}
+
+function btnPath7AplauseSound(){
+    audio = document.querySelector(".btnPath7AplauseSound")
+    audio.setAttribute("src", "../sounds/btnPath7AplauseSound.mp3")
+    audio.play()
 }
